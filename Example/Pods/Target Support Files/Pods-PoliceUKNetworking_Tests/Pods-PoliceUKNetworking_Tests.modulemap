@@ -1,0 +1,6 @@
+framework module Pods_PoliceUKNetworking_Tests {
+  umbrella header "Pods-PoliceUKNetworking_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

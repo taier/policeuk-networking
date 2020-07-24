@@ -1,0 +1,22 @@
+{
+  "name": "PoliceUKNetworking",
+  "version": "0.1.0",
+  "summary": "A short description of PoliceUKNetworking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Deniss Kaibagarovs/PoliceUKNetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Deniss Kaibagarovs": "deniss.kaibagarovs@paymentsense.com"
+  },
+  "source": {
+    "git": "https://github.com/Deniss Kaibagarovs/PoliceUKNetworking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PoliceUKNetworking/Classes/**/*"
+}

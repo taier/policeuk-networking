@@ -1,0 +1,6 @@
+use_frameworks!
+target 'PoliceUKNetworking_Tests' do
+  pod 'PoliceUKNetworking', :path => '../'
+  
+  
+end

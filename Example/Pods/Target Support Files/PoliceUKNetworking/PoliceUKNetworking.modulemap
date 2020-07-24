@@ -1,0 +1,6 @@
+framework module PoliceUKNetworking {
+  umbrella header "PoliceUKNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

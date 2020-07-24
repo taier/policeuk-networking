@@ -1,0 +1,16 @@
+PODS:
+  - PoliceUKNetworking (0.1.0)
+
+DEPENDENCIES:
+  - PoliceUKNetworking (from `../`)
+
+EXTERNAL SOURCES:
+  PoliceUKNetworking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PoliceUKNetworking: 787151344bc44e97f438c0b4051f654b8362e797
+
+PODFILE CHECKSUM: 46bcadaa9d618159acdb2ac2c0c80b1676b2b080
+
+COCOAPODS: 1.9.3
