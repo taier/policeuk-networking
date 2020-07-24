@@ -10,6 +10,8 @@
 		04AADD4124CB57AC00741C8D /* policeuk_networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AADD3724CB57AC00741C8D /* policeuk_networking.framework */; };
 		04AADD4624CB57AC00741C8D /* policeuk_networkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADD4524CB57AC00741C8D /* policeuk_networkingTests.swift */; };
 		04AADD4824CB57AC00741C8D /* policeuk_networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AADD3A24CB57AC00741C8D /* policeuk_networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AADD5324CB5E0D00741C8D /* PoliceUKNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADD5224CB5E0D00741C8D /* PoliceUKNetworking.swift */; };
+		04AADD5424CB5E0D00741C8D /* PoliceUKNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AADD5224CB5E0D00741C8D /* PoliceUKNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		04AADD4024CB57AC00741C8D /* policeuk-networkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "policeuk-networkingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AADD4524CB57AC00741C8D /* policeuk_networkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = policeuk_networkingTests.swift; sourceTree = "<group>"; };
 		04AADD4724CB57AC00741C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AADD5224CB5E0D00741C8D /* PoliceUKNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +74,8 @@
 		04AADD3924CB57AC00741C8D /* policeuk-networking */ = {
 			isa = PBXGroup;
 			children = (
-				04AADD3A24CB57AC00741C8D /* policeuk_networking.h */,
 				04AADD3B24CB57AC00741C8D /* Info.plist */,
+				04AADD5124CB5DBB00741C8D /* Public */,
 			);
 			path = "policeuk-networking";
 			sourceTree = "<group>";
@@ -84,6 +87,15 @@
 				04AADD4724CB57AC00741C8D /* Info.plist */,
 			);
 			path = "policeuk-networkingTests";
+			sourceTree = "<group>";
+		};
+		04AADD5124CB5DBB00741C8D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				04AADD3A24CB57AC00741C8D /* policeuk_networking.h */,
+				04AADD5224CB5E0D00741C8D /* PoliceUKNetworking.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					04AADD3624CB57AC00741C8D = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					04AADD3F24CB57AC00741C8D = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AADD5324CB5E0D00741C8D /* PoliceUKNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AADD4624CB57AC00741C8D /* policeuk_networkingTests.swift in Sources */,
+				04AADD5424CB5E0D00741C8D /* PoliceUKNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +355,7 @@
 		04AADD4C24CB57AC00741C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99TE4Z2NY7;
@@ -357,6 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaibagarov.policeuk-networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +382,7 @@
 		04AADD4D24CB57AC00741C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 99TE4Z2NY7;
@@ -390,6 +408,7 @@
 		04AADD4F24CB57AC00741C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99TE4Z2NY7;
 				INFOPLIST_FILE = "policeuk-networkingTests/Info.plist";
@@ -408,6 +427,7 @@
 		04AADD5024CB57AC00741C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99TE4Z2NY7;
 				INFOPLIST_FILE = "policeuk-networkingTests/Info.plist";
