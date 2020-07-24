@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "PoliceUKNetworking_Tests.xctest"
-               BlueprintName = "PoliceUKNetworking_Tests"
+               BuildableName = "PoliceUKNetworking-Tests.xctest"
+               BlueprintName = "PoliceUKNetworking-Tests"
                ReferencedContainer = "container:PoliceUKNetworking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,8 +56,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "PoliceUKNetworking_Tests.xctest"
-               BlueprintName = "PoliceUKNetworking_Tests"
+               BuildableName = "PoliceUKNetworking-Tests.xctest"
+               BlueprintName = "PoliceUKNetworking-Tests"
                ReferencedContainer = "container:PoliceUKNetworking.xcodeproj">
             </BuildableReference>
          </TestableReference>
