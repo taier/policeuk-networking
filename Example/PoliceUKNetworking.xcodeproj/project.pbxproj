@@ -20,7 +20,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CDA92DC4093E2C09653262F /* Pods_PoliceUKNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoliceUKNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC74FBAE0CCB8124F8E68539 /* Pods-PoliceUKNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliceUKNetworking_Tests.release.xcconfig"; path = "Target Support Files/Pods-PoliceUKNetworking_Tests/Pods-PoliceUKNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D4EA7EBB3D22E126AEBE81DE /* PoliceUKNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoliceUKNetworking.podspec; path = ../PoliceUKNetworking.podspec; sourceTree = "<group>"; };
+		D4EA7EBB3D22E126AEBE81DE /* PoliceUKNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoliceUKNetworking.podspec; path = ../PoliceUKNetworking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
