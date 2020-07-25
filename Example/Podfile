@@ -1,6 +1,10 @@
 use_frameworks!
-target 'PoliceUKNetworking_Tests' do
+
+target 'Example' do
+  pod 'Alamofire', '~> 5.2'
   pod 'PoliceUKNetworking', :path => '../'
   
-  
+  target 'PoliceUKNetworking-Tests' do
+    inherit! :search_paths
+  end
 end

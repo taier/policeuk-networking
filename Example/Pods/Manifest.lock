@@ -1,16 +1,24 @@
 PODS:
-  - PoliceUKNetworking (0.1.0)
+  - Alamofire (5.2.2)
+  - PoliceUKNetworking (0.1.0):
+    - Alamofire (~> 5.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - PoliceUKNetworking (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   PoliceUKNetworking:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PoliceUKNetworking: 787151344bc44e97f438c0b4051f654b8362e797
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  PoliceUKNetworking: a77a4913d78862d31d96fc55205643eab012e9bf
 
-PODFILE CHECKSUM: 46bcadaa9d618159acdb2ac2c0c80b1676b2b080
+PODFILE CHECKSUM: 22e1cccf16dc8177592c469f1e44920cdb8ed0f6
 
 COCOAPODS: 1.9.3

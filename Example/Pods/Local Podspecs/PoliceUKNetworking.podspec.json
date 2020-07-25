@@ -1,22 +1,30 @@
 {
   "name": "PoliceUKNetworking",
   "version": "0.1.0",
-  "summary": "A short description of PoliceUKNetworking.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Deniss Kaibagarovs/PoliceUKNetworking",
+  "summary": "A networking library that gets crime data from https://www.police.uk/",
+  "description": "A networking library wraps requests from https://www.police.uk/ into a complete swift objects",
+  "homepage": "https://github.com/taier",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Deniss Kaibagarovs": "deniss.kaibagarovs@paymentsense.com"
+    "Deniss Kaibagarovs": "deniss.kaibagarovs@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Deniss Kaibagarovs/PoliceUKNetworking.git",
+    "git": "https://github.com/taier/policeuk-networking.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/TheTaier",
   "platforms": {
-    "ios": "8.0"
+    "ios": "13.0"
   },
-  "source_files": "PoliceUKNetworking/Classes/**/*"
+  "swift_versions": "4.0",
+  "source_files": "PoliceUKNetworking/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 5.2"
+    ]
+  },
+  "swift_version": "4.0"
 }
