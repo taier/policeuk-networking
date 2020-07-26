@@ -52,13 +52,19 @@ class ViewController: UIViewController {
     }
     
     PoliceUKNetworking.getNeighbourhoods(forForce: "city-of-london") { response, error in
-      print("------------------ getNeighbourhoodPriorities ------------------")
+      print("------------------ getNeighbourhoods ------------------")
       print(response)
       print(error)
     }
     
     PoliceUKNetworking.getNeighbourhoodTeam(forForce: "city-of-london", forNeighbourhood: "cp") { response, error in
-      print("------------------ getNeighbourhoodPriorities ------------------")
+      print("------------------ getNeighbourhoodTeam ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getNeighbourhoodDetails(forForce: "city-of-london", forNeighbourhood: "cp") { response, error in
+      print("------------------ getNeighbourhoodDetails ------------------")
       print(response)
       print(error)
     }
