@@ -18,6 +18,7 @@ public class PoliceUKNetworking {
   let policeUKSeniorOfficersGateway = PoliceUKSeniorOfficersGateway()
   
   let policeUKNeighbourhoodPrioritiesGateway = PoliceUKNeighbourhoodPrioritiesGateway()
+  let policeUKListOfNeighbourhoodsForForceGateway = PoliceUKListOfNeighbourhoodsForForceGateway()
   
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
@@ -43,16 +44,16 @@ public class PoliceUKNetworking {
   }
   
   public static func getCrimeOutcome(forCrime: String,
-                                       completion:
-     @escaping ((PoliceUKCrimeOutcomeEntity?, Error?)->Void)) {
-     shared.policeUKCimeOutcomeGateway
-       .getSingle(shared.sessionManager, forCrime: forCrime)
-       .subscribe(onSuccess: { response in
-         completion(response, nil)
-       }) { error in
-         completion(nil, error)
-     }.disposed(by: shared.disposeBag)
-   }
+                                     completion:
+    @escaping ((PoliceUKCrimeOutcomeEntity?, Error?)->Void)) {
+    shared.policeUKCimeOutcomeGateway
+      .getSingle(shared.sessionManager, forCrime: forCrime)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
   
   public static func getForcesList(completion:
     @escaping (([PoliceUKForceEntity]?, Error?)->Void)) {
@@ -79,30 +80,43 @@ public class PoliceUKNetworking {
   
   public static func getSeniorOfficers(forForce: String,
                                        completion:
-     @escaping (([PoliceUKSeniorOfficerEntity]?, Error?)->Void)) {
-     shared.policeUKSeniorOfficersGateway
-       .getSingle(shared.sessionManager, forForce: forForce)
-       .subscribe(onSuccess: { response in
-         completion(response, nil)
-       }) { error in
-         completion(nil, error)
-     }.disposed(by: shared.disposeBag)
-   }
+    @escaping (([PoliceUKSeniorOfficerEntity]?, Error?)->Void)) {
+    shared.policeUKSeniorOfficersGateway
+      .getSingle(shared.sessionManager, forForce: forForce)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
   
   public static func getNeighbourhoodPriorities(forForce: String,
                                                 forNeighbourhood: String,
                                                 completion:
-      @escaping (([PoliceUKNeighbourhoodPrioritiesEntity]?, Error?)->Void)) {
-      shared.policeUKNeighbourhoodPrioritiesGateway
-        .getSingle(shared.sessionManager,
-                   forForce: forForce,
-                   forNeighbourhood: forNeighbourhood)
-        .subscribe(onSuccess: { response in
-          completion(response, nil)
-        }) { error in
-          completion(nil, error)
-      }.disposed(by: shared.disposeBag)
-    }
+    @escaping (([PoliceUKNeighbourhoodPrioritiesEntity]?, Error?)->Void)) {
+    shared.policeUKNeighbourhoodPrioritiesGateway
+      .getSingle(shared.sessionManager,
+                 forForce: forForce,
+                 forNeighbourhood: forNeighbourhood)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getNeighbourhoods(forForce: String,
+                                       completion:
+    @escaping (([PoliceUKPoliceUKNeighbourhoodEntity]?, Error?)->Void)) {
+    shared.policeUKListOfNeighbourhoodsForForceGateway
+      .getSingle(shared.sessionManager,
+                 forForce: forForce)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
   
   public static func setSession(session: Session) {
     shared.sessionManager = session
