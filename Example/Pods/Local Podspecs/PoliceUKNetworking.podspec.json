@@ -24,6 +24,12 @@
   "dependencies": {
     "Alamofire": [
       "~> 5.2"
+    ],
+    "RxSwift": [
+      "~> 5"
+    ],
+    "RxCocoa": [
+      "~> 5"
     ]
   },
   "swift_version": "4.0"

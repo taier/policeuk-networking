@@ -1,15 +1,22 @@
 
 import Foundation
-import Alamofire
+import RxSwift
 
 public class PoliceUKNetworking {
-  public static func getNumberOfCrimes() -> Int {
-    return 10
-  }
   
-  public static func testAF() {
-    AF.request("https://data.police.uk/api/crime-last-updated").response { response in
-        debugPrint(response)
-    }
+  static let shared = PoliceUKNetworking()
+  let disposeBag = DisposeBag()
+  
+  let policeUKCrimeLastUpdatedGateway = PoliceUKCrimeLastUpdatedGateway()
+  
+  public static func getCrimeDBLaseUpdateDate(completion:
+    @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
+    shared.policeUKCrimeLastUpdatedGateway
+      .getSingle()
+      .subscribe(onSuccess: { date in
+      completion(date, nil)
+    }) { error in
+      completion(nil, error)
+    }.disposed(by: shared.disposeBag)
   }
 }
