@@ -26,4 +26,8 @@ public class PoliceUKEndpoints {
   public static func forcesList() -> String {
     return "\(APIUrl)/forces"
   }
+  
+  public static func specificForce(force: String) -> String {
+    return "\(APIUrl)/forces/\(force)"
+  }
 }
