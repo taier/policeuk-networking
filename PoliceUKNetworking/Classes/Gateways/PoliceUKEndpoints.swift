@@ -42,4 +42,8 @@ public class PoliceUKEndpoints {
   public static func neighbourhoodPriorities(force: String, neighbourhood: String) -> String {
     return "\(APIUrl)/\(force)/\(neighbourhood)/priorities"
   }
+  
+  public static func neighbourhoodListForForce(force: String) -> String {
+    return "\(APIUrl)/\(force)/neighbourhoods"
+  }
 }
