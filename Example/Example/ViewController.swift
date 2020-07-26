@@ -38,6 +38,12 @@ class ViewController: UIViewController {
       print("------------------ getSeniorOfficers ------------------")
       print(response)
     }
+    
+    PoliceUKNetworking.getCrimeOutcome(forCrime: "bd810be14c9d58eb4b19cd496e6c9f052b4e2df1e2b514c12921f6e8b49a5d73") { response, error in
+      print("------------------ getCrimeOutcome ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
 
