@@ -27,6 +27,11 @@ class ViewController: UIViewController {
       print("------------------ getForcesList ------------------")
       print(response)
     }
+    
+    PoliceUKNetworking.getSpecificForce(forForce: "leicestershire") { response, error in
+      print("------------------ getSpecificForce ------------------")
+      print(response)
+    }
   }
 }
 
