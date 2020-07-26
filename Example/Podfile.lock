@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.2)
+  - Mocker (2.2.0)
   - PoliceUKNetworking (0.1.0):
     - Alamofire (~> 5.2)
     - RxCocoa (~> 5)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Mocker (~> 2.2.0)
   - PoliceUKNetworking (from `../`)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Mocker
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -30,11 +33,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Mocker: d0ceb340eddd5c28539a691ce67d068674cef9a0
   PoliceUKNetworking: b81d187376bc34e1e7d81629d6e01cf88095cba0
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 5979bce69c4b697b5b04fb20f46949a8c24a5ad6
+PODFILE CHECKSUM: b3697e657bca96184b5baa1c8a74f2506beef5e0
 
 COCOAPODS: 1.9.3

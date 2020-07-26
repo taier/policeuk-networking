@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    PoliceUKNetworking.getCrimeDBLaseUpdateDate { date, error in
-      print(date)
+    PoliceUKNetworking.getCrimeDBLaseUpdateDate { response, error in
+      print(response?.date)
     }
   }
 }

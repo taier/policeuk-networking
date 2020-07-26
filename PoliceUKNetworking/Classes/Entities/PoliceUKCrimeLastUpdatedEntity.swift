@@ -7,6 +7,10 @@
 
 import Foundation
 
-public struct PoliceUKCrimeLastUpdatedEntity: Decodable {
-  let date: String
+public struct PoliceUKCrimeLastUpdatedEntity: Codable, Equatable {
+  public let date: String
+  
+  public init(date: String) {
+    self.date = date
+  }
 }

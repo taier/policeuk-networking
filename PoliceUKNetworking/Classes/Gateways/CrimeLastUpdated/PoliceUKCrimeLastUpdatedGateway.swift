@@ -11,16 +11,16 @@ import RxCocoa
 import Alamofire
 
 class PoliceUKCrimeLastUpdatedGateway {
-  func getSingle() -> Single<PoliceUKCrimeLastUpdatedEntity> {
+  func getSingle(_ networking: Session) -> Single<PoliceUKCrimeLastUpdatedEntity> {
     return Single<PoliceUKCrimeLastUpdatedEntity>.create { emitter in
-      AF.request(PoliceUKEndpoints.crimeLastUpdated())
+      networking.request(PoliceUKEndpoints.crimeLastUpdated())
         .responseDecodable(of: PoliceUKCrimeLastUpdatedEntity.self)
         { response in
         if let entity = response.value {
           emitter(.success(entity))
-        } else {
-          emitter(.error(PoliceUKNetworkingError.unknownError))
-        }
+        } else if let error = response.error {
+          emitter(.error(error))
+        } 
       }
       return Disposables.create {}
     }

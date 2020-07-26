@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PoliceUKEndpoints {
+public class PoliceUKEndpoints {
   private static let baseURL = "https://data.police.uk"
   private static let APIUrl = "\(baseURL)/api"
   
