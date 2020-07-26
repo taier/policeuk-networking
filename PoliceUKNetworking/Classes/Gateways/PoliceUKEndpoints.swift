@@ -14,4 +14,12 @@ public class PoliceUKEndpoints {
   public static func crimeLastUpdated() -> String {
     return "\(APIUrl)/crime-last-updated"
   }
+  
+  public static func crimeCategories(date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/crime-categories?date=\(date)"
+    } else {
+      return "\(APIUrl)/crime-categories"
+    }
+  }
 }

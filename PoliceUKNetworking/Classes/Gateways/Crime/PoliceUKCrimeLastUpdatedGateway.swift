@@ -12,7 +12,7 @@ import Alamofire
 
 class PoliceUKCrimeLastUpdatedGateway {
   func getSingle(_ networking: Session) -> Single<PoliceUKCrimeLastUpdatedEntity> {
-    return Single<PoliceUKCrimeLastUpdatedEntity>.create { emitter in
+    return Single.create { emitter in
       networking.request(PoliceUKEndpoints.crimeLastUpdated())
         .responseDecodable(of: PoliceUKCrimeLastUpdatedEntity.self)
         { response in
