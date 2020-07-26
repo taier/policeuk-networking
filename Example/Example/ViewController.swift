@@ -13,10 +13,9 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    PoliceUKNetworking.testAF()
-    // Do any additional setup after loading the view.
+    PoliceUKNetworking.getCrimeDBLaseUpdateDate { response, error in
+      print(response?.date)
+    }
   }
-
-
 }
 
