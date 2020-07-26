@@ -30,4 +30,8 @@ public class PoliceUKEndpoints {
   public static func specificForce(force: String) -> String {
     return "\(APIUrl)/forces/\(force)"
   }
+  
+  public static func seniorOfficers(force: String) -> String {
+    return "\(APIUrl)/forces/\(force)/people"
+  }
 }

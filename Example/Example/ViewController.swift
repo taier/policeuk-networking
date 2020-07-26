@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     PoliceUKNetworking.getCrimeDBLaseUpdateDate { response, error in
       print("------------------ getCrimeDBLaseUpdateDate ------------------")
       print(response?.date)
@@ -30,6 +31,11 @@ class ViewController: UIViewController {
     
     PoliceUKNetworking.getSpecificForce(forForce: "leicestershire") { response, error in
       print("------------------ getSpecificForce ------------------")
+      print(response)
+    }
+    
+    PoliceUKNetworking.getSeniorOfficers(forForce: "leicestershire") { response, error in
+      print("------------------ getSeniorOfficers ------------------")
       print(response)
     }
   }
