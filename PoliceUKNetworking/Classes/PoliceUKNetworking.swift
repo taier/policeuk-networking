@@ -11,6 +11,7 @@ public class PoliceUKNetworking {
   
   let policeUKCrimeLastUpdatedGateway = PoliceUKCrimeLastUpdatedGateway()
   let policeUKCrimeCategoriesGateway = PoliceUKCrimeCategoriesGateway()
+  let policeUKCimeOutcomeGateway = PoliceUKCimeOutcomeGateway()
   
   let policeUKForcesListGateway = PoliceUKForcesListGateway()
   let policeUKSpecificForceGateway = PoliceUKSpecificForceGateway()
@@ -38,6 +39,18 @@ public class PoliceUKNetworking {
         completion(nil, error)
     }.disposed(by: shared.disposeBag)
   }
+  
+  public static func getCrimeOutcome(forCrime: String,
+                                       completion:
+     @escaping ((PoliceUKCrimeOutcomeEntity?, Error?)->Void)) {
+     shared.policeUKCimeOutcomeGateway
+       .getSingle(shared.sessionManager, forCrime: forCrime)
+       .subscribe(onSuccess: { response in
+         completion(response, nil)
+       }) { error in
+         completion(nil, error)
+     }.disposed(by: shared.disposeBag)
+   }
   
   public static func getForcesList(completion:
     @escaping (([PoliceUKForceEntity]?, Error?)->Void)) {

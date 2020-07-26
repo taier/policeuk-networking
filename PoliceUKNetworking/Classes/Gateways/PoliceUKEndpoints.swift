@@ -23,6 +23,10 @@ public class PoliceUKEndpoints {
     }
   }
   
+  public static func crimeOutcome(crime: String) -> String {
+     return "\(APIUrl)/outcomes-for-crime/\(crime)"
+  }
+  
   public static func forcesList() -> String {
     return "\(APIUrl)/forces"
   }
