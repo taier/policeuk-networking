@@ -56,6 +56,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getNeighbourhoodTeam(forForce: "city-of-london", forNeighbourhood: "cp") { response, error in
+      print("------------------ getNeighbourhoodPriorities ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
-
