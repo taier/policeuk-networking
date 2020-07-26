@@ -10,11 +10,15 @@ import UIKit
 import PoliceUKNetworking
 
 class ViewController: UIViewController {
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     PoliceUKNetworking.getCrimeDBLaseUpdateDate { response, error in
       print(response?.date)
+    }
+    
+    PoliceUKNetworking.getCrimeCategory { response, error in
+      print(response)
     }
   }
 }
