@@ -14,10 +14,17 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     PoliceUKNetworking.getCrimeDBLaseUpdateDate { response, error in
+      print("------------------ getCrimeDBLaseUpdateDate ------------------")
       print(response?.date)
     }
     
     PoliceUKNetworking.getCrimeCategory { response, error in
+      print("------------------ getCrimeCategory ------------------")
+      print(response)
+    }
+    
+    PoliceUKNetworking.getForcesList { response, error in
+      print("------------------ getForcesList ------------------")
       print(response)
     }
   }
