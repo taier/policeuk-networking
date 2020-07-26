@@ -38,4 +38,8 @@ public class PoliceUKEndpoints {
   public static func seniorOfficers(force: String) -> String {
     return "\(APIUrl)/forces/\(force)/people"
   }
+  
+  public static func neighbourhoodPriorities(force: String, neighbourhood: String) -> String {
+    return "\(APIUrl)/\(force)/\(neighbourhood)/priorities"
+  }
 }

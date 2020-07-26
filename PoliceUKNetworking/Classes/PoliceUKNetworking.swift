@@ -17,6 +17,8 @@ public class PoliceUKNetworking {
   let policeUKSpecificForceGateway = PoliceUKSpecificForceGateway()
   let policeUKSeniorOfficersGateway = PoliceUKSeniorOfficersGateway()
   
+  let policeUKNeighbourhoodPrioritiesGateway = PoliceUKNeighbourhoodPrioritiesGateway()
+  
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
     shared.policeUKCrimeLastUpdatedGateway
@@ -86,6 +88,21 @@ public class PoliceUKNetworking {
          completion(nil, error)
      }.disposed(by: shared.disposeBag)
    }
+  
+  public static func getNeighbourhoodPriorities(forForce: String,
+                                                forNeighbourhood: String,
+                                                completion:
+      @escaping (([PoliceUKNeighbourhoodPrioritiesEntity]?, Error?)->Void)) {
+      shared.policeUKNeighbourhoodPrioritiesGateway
+        .getSingle(shared.sessionManager,
+                   forForce: forForce,
+                   forNeighbourhood: forNeighbourhood)
+        .subscribe(onSuccess: { response in
+          completion(response, nil)
+        }) { error in
+          completion(nil, error)
+      }.disposed(by: shared.disposeBag)
+    }
   
   public static func setSession(session: Session) {
     shared.sessionManager = session
