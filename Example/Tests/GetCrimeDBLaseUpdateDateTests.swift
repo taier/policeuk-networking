@@ -3,7 +3,7 @@ import Mocker
 import Alamofire
 import PoliceUKNetworking
 
-class getCrimeDBLaseUpdateDateTests: XCTestCaseBase {
+class GetCrimeDBLaseUpdateDateTests: XCTestCaseBase {
   
   private let extectedResponse = PoliceUKCrimeLastUpdatedEntity(date: "2020-05-11")
   private let apiEndpoint = URL(string: PoliceUKEndpoints.crimeLastUpdated())!

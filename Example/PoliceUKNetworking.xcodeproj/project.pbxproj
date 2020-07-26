@@ -15,7 +15,7 @@
 		045A786D24CC871E00F8E611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045A786B24CC871E00F8E611 /* LaunchScreen.storyboard */; };
 		04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */; };
 		5FF382D21A01A5A3D9939C1C /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3524B4CC822A858DF1FD7B43 /* Pods_Example.framework */; };
-		607FACEC1AFB9204008FA782 /* getCrimeDBLaseUpdateDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* getCrimeDBLaseUpdateDateTests.swift */; };
+		607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */; };
 		B22F030376575C1A0A1347F3 /* Pods_PoliceUKNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDA92DC4093E2C09653262F /* Pods_PoliceUKNetworking_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		55D06F6B2023084239CA4751 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PoliceUKNetworking-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PoliceUKNetworking-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* getCrimeDBLaseUpdateDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCrimeDBLaseUpdateDateTests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrimeDBLaseUpdateDateTests.swift; sourceTree = "<group>"; };
 		6CDA92DC4093E2C09653262F /* Pods_PoliceUKNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoliceUKNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4F17076044EE1C22BB5980 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BC74FBAE0CCB8124F8E68539 /* Pods-PoliceUKNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliceUKNetworking_Tests.release.xcconfig"; path = "Target Support Files/Pods-PoliceUKNetworking_Tests/Pods-PoliceUKNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */,
-				607FACEB1AFB9204008FA782 /* getCrimeDBLaseUpdateDateTests.swift */,
+				607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* getCrimeDBLaseUpdateDateTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */,
 				04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
