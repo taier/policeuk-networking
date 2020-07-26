@@ -22,6 +22,7 @@
 		04EFA8FB24CE19C90090D581 /* GetNeighbourhoodPrioritiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8FA24CE19C90090D581 /* GetNeighbourhoodPrioritiesTests.swift */; };
 		04EFA90124CE1F250090D581 /* GetNeighbourhoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA90024CE1F250090D581 /* GetNeighbourhoodsTests.swift */; };
 		04EFA90A24CE24730090D581 /* GetNeighbourhoodTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA90924CE24730090D581 /* GetNeighbourhoodTeamTests.swift */; };
+		04EFA91024CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA90F24CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift */; };
 		5FF382D21A01A5A3D9939C1C /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3524B4CC822A858DF1FD7B43 /* Pods_Example.framework */; };
 		607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */; };
 		B22F030376575C1A0A1347F3 /* Pods_PoliceUKNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDA92DC4093E2C09653262F /* Pods_PoliceUKNetworking_Tests.framework */; };
@@ -55,6 +56,7 @@
 		04EFA8FA24CE19C90090D581 /* GetNeighbourhoodPrioritiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodPrioritiesTests.swift; sourceTree = "<group>"; };
 		04EFA90024CE1F250090D581 /* GetNeighbourhoodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodsTests.swift; sourceTree = "<group>"; };
 		04EFA90924CE24730090D581 /* GetNeighbourhoodTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodTeamTests.swift; sourceTree = "<group>"; };
+		04EFA90F24CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodDetailsTests.swift; sourceTree = "<group>"; };
 		1A2B55DD84967A4FE8126A60 /* Pods-PoliceUKNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliceUKNetworking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PoliceUKNetworking_Tests/Pods-PoliceUKNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3524B4CC822A858DF1FD7B43 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F60E991D2B3554BD6AFE1EE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				04EFA8FA24CE19C90090D581 /* GetNeighbourhoodPrioritiesTests.swift */,
 				04EFA90024CE1F250090D581 /* GetNeighbourhoodsTests.swift */,
 				04EFA90924CE24730090D581 /* GetNeighbourhoodTeamTests.swift */,
+				04EFA90F24CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift */,
 			);
 			name = Neighbourhood;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				04EFA90124CE1F250090D581 /* GetNeighbourhoodsTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */,
 				04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */,
+				04EFA91024CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift in Sources */,
 				04EFA8E524CDE4AD0090D581 /* GetSpecificForceTests.swift in Sources */,
 				04EFA8F324CDFC5A0090D581 /* GetCrimeOutcomeTests.swift in Sources */,
 			);
