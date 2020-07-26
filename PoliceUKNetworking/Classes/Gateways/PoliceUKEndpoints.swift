@@ -22,4 +22,8 @@ public class PoliceUKEndpoints {
       return "\(APIUrl)/crime-categories"
     }
   }
+  
+  public static func forcesList() -> String {
+    return "\(APIUrl)/forces"
+  }
 }

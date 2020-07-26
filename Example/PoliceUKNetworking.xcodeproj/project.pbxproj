@@ -15,6 +15,7 @@
 		045A786D24CC871E00F8E611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045A786B24CC871E00F8E611 /* LaunchScreen.storyboard */; };
 		04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */; };
 		04EFA8D124CDA92A0090D581 /* GetCrimeCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */; };
+		04EFA8DF24CDD9BB0090D581 /* GetForcesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8DE24CDD9BB0090D581 /* GetForcesListTests.swift */; };
 		5FF382D21A01A5A3D9939C1C /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3524B4CC822A858DF1FD7B43 /* Pods_Example.framework */; };
 		607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */; };
 		B22F030376575C1A0A1347F3 /* Pods_PoliceUKNetworking_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDA92DC4093E2C09653262F /* Pods_PoliceUKNetworking_Tests.framework */; };
@@ -41,6 +42,7 @@
 		045A786E24CC871E00F8E611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseBase.swift; sourceTree = "<group>"; };
 		04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrimeCategoryTests.swift; sourceTree = "<group>"; };
+		04EFA8DE24CDD9BB0090D581 /* GetForcesListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForcesListTests.swift; sourceTree = "<group>"; };
 		1A2B55DD84967A4FE8126A60 /* Pods-PoliceUKNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoliceUKNetworking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PoliceUKNetworking_Tests/Pods-PoliceUKNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3524B4CC822A858DF1FD7B43 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F60E991D2B3554BD6AFE1EE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -91,6 +93,23 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		04EFA8DC24CDD9920090D581 /* Crime */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */,
+				04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */,
+			);
+			name = Crime;
+			sourceTree = "<group>";
+		};
+		04EFA8DD24CDD99E0090D581 /* Force */ = {
+			isa = PBXGroup;
+			children = (
+				04EFA8DE24CDD9BB0090D581 /* GetForcesListTests.swift */,
+			);
+			name = Force;
+			sourceTree = "<group>";
+		};
 		496581068F099CCEE5691D3F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +147,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				04EFA8DD24CDD99E0090D581 /* Force */,
+				04EFA8DC24CDD9920090D581 /* Crime */,
 				04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */,
-				607FACEB1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift */,
-				04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -373,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EFA8DF24CDD9BB0090D581 /* GetForcesListTests.swift in Sources */,
 				04EFA8D124CDA92A0090D581 /* GetCrimeCategoryTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* GetCrimeDBLaseUpdateDateTests.swift in Sources */,
 				04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */,
