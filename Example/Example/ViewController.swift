@@ -74,5 +74,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getCrimeDataAvailability { response, error in
+      print("------------------ getCrimeDataAvailability ------------------")
+      print(response)
+      print(error)
+    }
   }
 }

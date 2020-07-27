@@ -29,7 +29,7 @@ class GetCrimeOutcomeTests: XCTestCaseBase {
                                                                                                                                                             name: "name-test"))))
   private let apiEndpoint = URL(string: PoliceUKEndpoints.crimeOutcome(crime: requestParam))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

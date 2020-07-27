@@ -25,7 +25,7 @@ class GetSpecificForceTests: XCTestCaseBase {
                                                                                                                         title: "title-test")])
   private let apiEndpoint = URL(string: PoliceUKEndpoints.specificForce(force: requestParam))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

@@ -17,7 +17,7 @@ class GetCrimeCategoryTests: XCTestCaseBase {
                                   PoliceUKCrimeCategoryEntity(url: "bicycle-theft", name: "Bicycle theft")]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.crimeCategories(date: nil))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

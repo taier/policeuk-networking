@@ -29,7 +29,7 @@ class GetCrimesWithNoLocationTests: XCTestCaseBase {
                                                                                force: requestParamCrimeCategory,
                                                                                date: requestParamDate))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)
