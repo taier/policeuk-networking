@@ -18,7 +18,7 @@ class GetNeighbourhoodsTests: XCTestCaseBase {
                                   PoliceUKPoliceUKNeighbourhoodEntity(id: "test-id-2", name: "test-name-2")]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodListForForce(force: requestParam))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

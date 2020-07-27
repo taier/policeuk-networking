@@ -20,7 +20,7 @@ class GetSeniorOfficersTests: XCTestCaseBase {
                                                              contact_details: PoliceUKSeniorOfficerContactDetails(twitter:"twitter-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.seniorOfficers(force: requestParam))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

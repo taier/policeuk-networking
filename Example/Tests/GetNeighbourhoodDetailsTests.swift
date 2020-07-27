@@ -30,7 +30,7 @@ class GetNeighbourhoodDetailsTests: XCTestCaseBase {
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodDetails(force: requestParamForce,
                                                                                neighbourhood: requestParamNeibourhood))!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

@@ -17,7 +17,7 @@ class GetForcesListTests: XCTestCaseBase {
                                   PoliceUKForceEntity(id: "city-of-london", name: "City of London Police")]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.forcesList())!
   
-  func testSuccessWithoutDate() {
+  func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
     
     let mockedData = try! JSONEncoder().encode(expectedResponse)

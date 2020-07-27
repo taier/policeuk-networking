@@ -37,6 +37,10 @@ public class PoliceUKEndpoints {
     return composed
   }
   
+  public static func crimeDataAvailability() -> String {
+    return "\(APIUrl)/crimes-street-dates"
+  }
+  
   public static func forcesList() -> String {
     return "\(APIUrl)/forces"
   }

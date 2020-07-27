@@ -9,19 +9,23 @@ public class PoliceUKNetworking {
   private let disposeBag = DisposeBag()
   private var sessionManager: Session = AF //default alomafire session manager
   
+  // Crime
   let policeUKCrimeLastUpdatedGateway = PoliceUKCrimeLastUpdatedGateway()
   let policeUKCrimeCategoriesGateway = PoliceUKCrimeCategoriesGateway()
   let policeUKCimeOutcomeGateway = PoliceUKCimeOutcomeGateway()
+  let policeUKCrimesWithNoLocationGateway = PoliceUKCrimesWithNoLocationGateway()
+  let policeUKCrimeDataAvailabilityGateway = PoliceUKCrimeDataAvailabilityGateway()
   
+  // Force
   let policeUKForcesListGateway = PoliceUKForcesListGateway()
   let policeUKSpecificForceGateway = PoliceUKSpecificForceGateway()
   let policeUKSeniorOfficersGateway = PoliceUKSeniorOfficersGateway()
   
+  // Neighbourhood
   let policeUKNeighbourhoodPrioritiesGateway = PoliceUKNeighbourhoodPrioritiesGateway()
   let policeUKListOfNeighbourhoodsForForceGateway = PoliceUKListOfNeighbourhoodsForForceGateway()
   let policeUKNeighbourhoodTeamGateway = PoliceUKNeighbourhoodTeamGateway()
   let policeUKSpecificNeighbourhoodGateway = PoliceUKSpecificNeighbourhoodGateway()
-  let policeUKCrimesWithNoLocationGateway = PoliceUKCrimesWithNoLocationGateway()
   
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
@@ -33,6 +37,17 @@ public class PoliceUKNetworking {
         completion(nil, error)
     }.disposed(by: shared.disposeBag)
   }
+  
+  public static func getCrimeDataAvailability(completion:
+     @escaping (([PoliceUKCrimeDataAvailabilityEntity]?, Error?)->Void)) {
+     shared.policeUKCrimeDataAvailabilityGateway
+       .getSingle(shared.sessionManager)
+       .subscribe(onSuccess: { response in
+         completion(response, nil)
+       }) { error in
+         completion(nil, error)
+     }.disposed(by: shared.disposeBag)
+   }
   
   public static func getCrimeCategory(forDate: String? = nil,
                                       completion:
