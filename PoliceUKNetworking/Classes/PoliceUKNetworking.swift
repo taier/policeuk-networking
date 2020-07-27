@@ -29,6 +29,7 @@ public class PoliceUKNetworking {
   
   // Stop and Search
   let policeUKStopAndSearchByForceGateway = PoliceUKStopAndSearchByForceGateway()
+  let policeUKStopAndSearchByLocationGateway = PoliceUKStopAndSearchByLocationGateway()
   
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
@@ -186,7 +187,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getStopAndSearch(forForce: String,
+  public static func getStopAndSearchByForce(forForce: String,
                                       forDate: String? = nil,
                                            completion:
      @escaping (([PoliceUKStopAndSearchEntity]?, Error?)->Void)) {
@@ -200,6 +201,21 @@ public class PoliceUKNetworking {
          completion(nil, error)
      }.disposed(by: shared.disposeBag)
    }
+  
+  public static func getStopAndSearchByLocation(forLocationID: String,
+                                                forDate: String? = nil,
+                                                completion:
+      @escaping (([PoliceUKStopAndSearchEntity]?, Error?)->Void)) {
+      shared.policeUKStopAndSearchByLocationGateway
+        .getSingle(shared.sessionManager,
+                   forLocationID: forLocationID,
+                   forDate: forDate)
+        .subscribe(onSuccess: { response in
+          completion(response, nil)
+        }) { error in
+          completion(nil, error)
+      }.disposed(by: shared.disposeBag)
+    }
   
   public static func setSession(session: Session) {
     shared.sessionManager = session

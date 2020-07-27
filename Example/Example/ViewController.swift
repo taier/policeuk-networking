@@ -81,8 +81,14 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getStopAndSearch(forForce: "city-of-london") { response, error in
-      print("------------------ getCrimeDataAvailability ------------------")
+    PoliceUKNetworking.getStopAndSearchByForce(forForce: "city-of-london") { response, error in
+      print("------------------ getStopAndSearchByForce ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getStopAndSearchByLocation(forLocationID: "543585") { response, error in
+      print("------------------ getStopAndSearchByLocation ------------------")
       print(response)
       print(error)
     }
