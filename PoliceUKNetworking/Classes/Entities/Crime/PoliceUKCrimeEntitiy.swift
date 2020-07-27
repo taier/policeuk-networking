@@ -16,6 +16,7 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
   public let location_subtype: String?
   public let month: String?
   public let location: PoliceUKCrimeLocation?
+  public let outcome_status: PoliceUKCrimeOutcomeStatus? //TODO would not exist for Outcome
   
   public init(category: String? = nil,
               location_type: String? = nil,
@@ -24,7 +25,8 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
               id: Int? = nil,
               location_subtype: String? = nil,
               month: String? = nil,
-              location: PoliceUKCrimeLocation? = nil) {
+              location: PoliceUKCrimeLocation? = nil,
+              outcome_status: PoliceUKCrimeOutcomeStatus? = nil) {
     self.category = category
     self.location_type = location_type
     self.context = context
@@ -33,6 +35,7 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
     self.location_subtype = location_subtype
     self.month = month
     self.location = location
+    self.outcome_status = outcome_status
   }
 }
 
@@ -58,5 +61,16 @@ public struct PoliceUKCrimeLocationStreet: Codable, Equatable {
               name: String? = nil) {
     self.id = id
     self.name = name
+  }
+}
+
+public struct PoliceUKCrimeOutcomeStatus: Codable, Equatable {
+  public let category: String
+  public let date: String
+  
+  public init(category: String,
+              date: String) {
+    self.category = category
+    self.date = date
   }
 }
