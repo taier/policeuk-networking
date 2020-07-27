@@ -68,4 +68,13 @@ public class PoliceUKEndpoints {
   public static func neighbourhoodDetails(force: String, neighbourhood: String) -> String {
     return "\(APIUrl)/\(force)/\(neighbourhood)"
   }
+  
+  public static func stopAndSearchByForce(force: String,
+                                          date: String?) -> String {
+    var composed = "\(APIUrl)/stops-force?force=\(force)"
+    if let date = date {
+      composed = "\(composed)&date=\(date)"
+    }
+    return composed
+  }
 }

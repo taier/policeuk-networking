@@ -80,5 +80,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getStopAndSearch(forForce: "city-of-london") { response, error in
+      print("------------------ getCrimeDataAvailability ------------------")
+      print(response)
+      print(error)
+    }
   }
 }

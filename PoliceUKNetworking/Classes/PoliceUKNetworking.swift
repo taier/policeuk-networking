@@ -27,6 +27,9 @@ public class PoliceUKNetworking {
   let policeUKNeighbourhoodTeamGateway = PoliceUKNeighbourhoodTeamGateway()
   let policeUKSpecificNeighbourhoodGateway = PoliceUKSpecificNeighbourhoodGateway()
   
+  // Stop and Search
+  let policeUKStopAndSearchByForceGateway = PoliceUKStopAndSearchByForceGateway()
+  
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
     shared.policeUKCrimeLastUpdatedGateway
@@ -182,6 +185,21 @@ public class PoliceUKNetworking {
         completion(nil, error)
     }.disposed(by: shared.disposeBag)
   }
+  
+  public static func getStopAndSearch(forForce: String,
+                                      forDate: String? = nil,
+                                           completion:
+     @escaping (([PoliceUKStopAndSearchEntity]?, Error?)->Void)) {
+     shared.policeUKStopAndSearchByForceGateway
+       .getSingle(shared.sessionManager,
+                  forForce: forForce,
+                  forDate: forDate)
+       .subscribe(onSuccess: { response in
+         completion(response, nil)
+       }) { error in
+         completion(nil, error)
+     }.disposed(by: shared.disposeBag)
+   }
   
   public static func setSession(session: Session) {
     shared.sessionManager = session
