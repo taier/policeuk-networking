@@ -92,5 +92,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getStopAndSearchWithNoLocation(forForce: "city-of-london") { response, error in
+      print("------------------ getStopAndSearchWithNoLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
