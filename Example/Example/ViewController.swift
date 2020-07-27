@@ -98,5 +98,17 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getCrimeByLocation(forLocationID: "884227", forDate:"2017-10") { response, error in
+      print("------------------ getCrimeByLocation ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getCrimeByLocation(forLatitude:"52.629729", forLongitude: "-1.131592") { response, error in
+      print("------------------ getCrimeByLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }

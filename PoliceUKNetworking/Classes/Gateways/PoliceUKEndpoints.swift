@@ -37,6 +37,31 @@ public class PoliceUKEndpoints {
     return composed
   }
   
+  public static func crimeByLocation(locationID: String,
+                                     date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/crimes-at-location?date=\(date)&location_id=\(locationID)"
+    } else {
+      return "\(APIUrl)/crimes-at-location?location_id=\(locationID)"
+    }
+  }
+  
+  public static func crimeByLocation(lat: String,
+                                     lng: String,
+                                     date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/crimes-at-location?date=\(date)&lat=\(lat))&lng=\(lng)"
+    } else {
+      return "\(APIUrl)/crimes-at-location?lat=\(lat)&lng=\(lng)"
+    }
+  }
+  
+  public static func crimeByLocation(lat: String,
+                                     lot: String,
+                                     date: String?) -> String {
+    return "\(APIUrl)/crimes-street-dates"
+  }
+  
   public static func crimeDataAvailability() -> String {
     return "\(APIUrl)/crimes-street-dates"
   }
