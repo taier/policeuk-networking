@@ -15,6 +15,7 @@ public class PoliceUKNetworking {
   let policeUKCimeOutcomeGateway = PoliceUKCimeOutcomeGateway()
   let policeUKCrimesWithNoLocationGateway = PoliceUKCrimesWithNoLocationGateway()
   let policeUKCrimeDataAvailabilityGateway = PoliceUKCrimeDataAvailabilityGateway()
+  let policeUKCrimeByLocationGateway = PoliceUKCrimeByLocationGateway()
   
   // Force
   let policeUKForcesListGateway = PoliceUKForcesListGateway()
@@ -71,6 +72,38 @@ public class PoliceUKNetworking {
     @escaping ((PoliceUKCrimeOutcomeEntity?, Error?)->Void)) {
     shared.policeUKCimeOutcomeGateway
       .getSingle(shared.sessionManager, forCrime: forCrime)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getCrimeByLocation(forLocationID: String,
+                                        forDate: String? = nil,
+                                        completion:
+    @escaping (([PoliceUKCrimeEntitiy]?, Error?)->Void)) {
+    shared.policeUKCrimeByLocationGateway
+      .getSingle(shared.sessionManager,
+                 forLocationID: forLocationID,
+                 forDate: forDate)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getCrimeByLocation(forLatitude: String,
+                                        forLongitude: String,
+                                        forDate: String? = nil,
+                                        completion:
+    @escaping (([PoliceUKCrimeEntitiy]?, Error?)->Void)) {
+    shared.policeUKCrimeByLocationGateway
+      .getSingle(shared.sessionManager,
+                 forLatitude: forLatitude,
+                 forLongitude: forLongitude,
+                 forDate: forDate)
       .subscribe(onSuccess: { response in
         completion(response, nil)
       }) { error in
