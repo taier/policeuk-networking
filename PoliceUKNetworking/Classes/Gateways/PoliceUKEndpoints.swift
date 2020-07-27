@@ -16,15 +16,25 @@ public class PoliceUKEndpoints {
   }
   
   public static func crimeCategories(date: String?) -> String {
+    var composed = "\(APIUrl)/crime-categories"
     if let date = date {
-      return "\(APIUrl)/crime-categories?date=\(date)"
-    } else {
-      return "\(APIUrl)/crime-categories"
+      composed = "\(composed)?date=\(date)"
     }
+    return composed
   }
   
   public static func crimeOutcome(crime: String) -> String {
-     return "\(APIUrl)/outcomes-for-crime/\(crime)"
+    return "\(APIUrl)/outcomes-for-crime/\(crime)"
+  }
+  
+  public static func crimesWithNoLocation(crimeCategory: String,
+                                          force: String,
+                                          date: String?) -> String {
+    var composed = "\(APIUrl)/crimes-no-location?category=\(crimeCategory)&force=\(force)"
+    if let date = date {
+      composed = "\(composed)&date=\(date)"
+    }
+    return composed
   }
   
   public static func forcesList() -> String {
@@ -52,6 +62,6 @@ public class PoliceUKEndpoints {
   }
   
   public static func neighbourhoodDetails(force: String, neighbourhood: String) -> String {
-     return "\(APIUrl)/\(force)/\(neighbourhood)"
-   }
+    return "\(APIUrl)/\(force)/\(neighbourhood)"
+  }
 }

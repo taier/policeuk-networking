@@ -68,5 +68,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getCrimesWithNoLocation(forCrimeCategory: "all-crime", forForce: "leicestershire") { response, error in
+      print("------------------ getCrimesWithNoLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
