@@ -1,19 +1,21 @@
 //
-//  GetStopAndSearchTests.swift
+//  GetStopAndSearchByLocationTets.swift
 //  PoliceUKNetworking-Tests
 //
 //  Created by Deniss Kaibagarovs on 27/07/2020.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
+import Foundation
+
 import XCTest
 import Mocker
 import Alamofire
 import PoliceUKNetworking
 
-class GetStopAndSearchTests: XCTestCaseBase {
+class GetStopAndSearchByLocationTets: XCTestCaseBase {
   
-  private static let requestParamForce = "force-test"
+  private static let requestParamLocation = "location-test"
   private static let requestParamDate = "date-test"
   private let expectedResponse = [PoliceUKStopAndSearchEntity(age_range: "age-range-test",
                                                               self_defined_ethnicity: "self_defined_ethnicity-test",
@@ -32,7 +34,7 @@ class GetStopAndSearchTests: XCTestCaseBase {
                                                               outcome: "outcome-test",
                                                               type: "type-test",
                                                               operation_name: "operation_name-test")]
-  private let apiEndpoint = URL(string: PoliceUKEndpoints.stopAndSearchByForce(force: requestParamForce, date: requestParamDate))!
+  private let apiEndpoint = URL(string: PoliceUKEndpoints.stopAndSearchByLocation(locationID: requestParamLocation, date: requestParamDate))!
   
   func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")
@@ -41,8 +43,8 @@ class GetStopAndSearchTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 200, data: [Mock.HTTPMethod.get : mockedData])
     mock.register()
     
-    PoliceUKNetworking.getStopAndSearch(forForce: GetStopAndSearchTests.requestParamForce,
-                                        forDate: GetStopAndSearchTests.requestParamDate
+    PoliceUKNetworking.getStopAndSearchByLocation(forLocationID: GetStopAndSearchByLocationTets.requestParamLocation,
+                                                  forDate: GetStopAndSearchByLocationTets.requestParamDate
     ) { (response, error) in
       XCTAssertNotNil(response, "response is null on success")
       XCTAssertNil(error, "error is not null on success")
@@ -59,8 +61,8 @@ class GetStopAndSearchTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 400, data: [Mock.HTTPMethod.get : Data()])
     mock.register()
     
-    PoliceUKNetworking.getStopAndSearch(forForce: GetStopAndSearchTests.requestParamForce,
-                                        forDate: GetStopAndSearchTests.requestParamDate
+    PoliceUKNetworking.getStopAndSearchByLocation(forLocationID: GetStopAndSearchByLocationTets.requestParamLocation,
+                                                  forDate: GetStopAndSearchByLocationTets.requestParamDate
     ) { (response, error) in
       XCTAssertNil(response, "response is not null on error")
       XCTAssertNotNil(error, "error is null on error")
@@ -77,4 +79,3 @@ class GetStopAndSearchTests: XCTestCaseBase {
     wait(for: [requestExpectation], timeout: 5.0)
   }
 }
-

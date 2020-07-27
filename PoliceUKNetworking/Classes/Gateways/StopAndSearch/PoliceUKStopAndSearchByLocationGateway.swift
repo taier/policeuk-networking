@@ -1,5 +1,5 @@
 //
-//  PoliceUKStopAndSearchByForceGateway.swift
+//  PoliceUKStopAndSearchByLocationGateway.swift
 //  PoliceUKNetworking
 //
 //  Created by Deniss Kaibagarovs on 27/07/2020.
@@ -10,12 +10,12 @@ import RxSwift
 import RxCocoa
 import Alamofire
 
-class PoliceUKStopAndSearchByForceGateway {
+class PoliceUKStopAndSearchByLocationGateway {
   func getSingle(_ networking: Session,
-                 forForce: String,
+                 forLocationID: String,
                  forDate: String?) -> Single<[PoliceUKStopAndSearchEntity]> {
     return Single.create { emitter in
-      networking.request(PoliceUKEndpoints.stopAndSearchByForce(force: forForce, date: forDate))
+      networking.request(PoliceUKEndpoints.stopAndSearchByLocation(locationID: forLocationID, date: forDate))
         .responseDecodable(of: [PoliceUKStopAndSearchEntity].self)
         { response in
         if let entity = response.value {

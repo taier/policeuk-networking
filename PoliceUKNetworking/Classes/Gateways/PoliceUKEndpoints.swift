@@ -77,4 +77,13 @@ public class PoliceUKEndpoints {
     }
     return composed
   }
+  
+  public static func stopAndSearchByLocation(locationID: String,
+                                             date: String?) -> String {
+    var composed = "\(APIUrl)/stops-at-location?location_id=\(locationID)"
+    if let date = date {
+      composed = "\(composed)&date=\(date)"
+    }
+    return composed
+  }
 }
