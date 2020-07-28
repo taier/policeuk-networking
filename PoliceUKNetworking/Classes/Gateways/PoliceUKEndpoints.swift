@@ -50,16 +50,10 @@ public class PoliceUKEndpoints {
                                      lng: String,
                                      date: String?) -> String {
     if let date = date {
-      return "\(APIUrl)/crimes-at-location?date=\(date)&lat=\(lat))&lng=\(lng)"
+      return "\(APIUrl)/crimes-at-location?date=\(date)&lat=\(lat)&lng=\(lng)"
     } else {
       return "\(APIUrl)/crimes-at-location?lat=\(lat)&lng=\(lng)"
     }
-  }
-  
-  public static func crimeByLocation(lat: String,
-                                     lot: String,
-                                     date: String?) -> String {
-    return "\(APIUrl)/crimes-street-dates"
   }
   
   public static func crimeDataAvailability() -> String {
@@ -92,6 +86,11 @@ public class PoliceUKEndpoints {
   
   public static func neighbourhoodDetails(force: String, neighbourhood: String) -> String {
     return "\(APIUrl)/\(force)/\(neighbourhood)"
+  }
+  
+  public static func locateNeighbourhood(lat: String,
+                                         lng: String) -> String {
+    return "\(APIUrl)/locate-neighbourhood?q=\(lat),\(lng)"
   }
   
   public static func stopAndSearchByForce(force: String,
