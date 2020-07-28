@@ -110,5 +110,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getNeighbourhoodByLocation(forLatitude:"52.629729", forLongitude: "-1.131592") { response, error in
+      print("------------------ getNeighbourhoodByLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
