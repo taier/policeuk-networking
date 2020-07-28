@@ -21,6 +21,7 @@
 		047B6D0224CF56C2008C531A /* GetCrimeByLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D0124CF56C2008C531A /* GetCrimeByLocationTests.swift */; };
 		047B6D0824D000C6008C531A /* GetNeighbourhoodByLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D0724D000C6008C531A /* GetNeighbourhoodByLocationTests.swift */; };
 		047B6D0E24D00686008C531A /* GetNeighbourhoodBoundaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D0D24D00686008C531A /* GetNeighbourhoodBoundaryTests.swift */; };
+		047B6D1424D0728A008C531A /* GetCrimeByCustomLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D1324D0728A008C531A /* GetCrimeByCustomLocationTests.swift */; };
 		04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */; };
 		04EFA8D124CDA92A0090D581 /* GetCrimeCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */; };
 		04EFA8DF24CDD9BB0090D581 /* GetForcesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8DE24CDD9BB0090D581 /* GetForcesListTests.swift */; };
@@ -63,6 +64,7 @@
 		047B6D0124CF56C2008C531A /* GetCrimeByLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrimeByLocationTests.swift; sourceTree = "<group>"; };
 		047B6D0724D000C6008C531A /* GetNeighbourhoodByLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodByLocationTests.swift; sourceTree = "<group>"; };
 		047B6D0D24D00686008C531A /* GetNeighbourhoodBoundaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNeighbourhoodBoundaryTests.swift; sourceTree = "<group>"; };
+		047B6D1324D0728A008C531A /* GetCrimeByCustomLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrimeByCustomLocationTests.swift; sourceTree = "<group>"; };
 		04EFA8C924CD95D30090D581 /* XCTestCaseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseBase.swift; sourceTree = "<group>"; };
 		04EFA8D024CDA92A0090D581 /* GetCrimeCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrimeCategoryTests.swift; sourceTree = "<group>"; };
 		04EFA8DE24CDD9BB0090D581 /* GetForcesListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForcesListTests.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				047B6CE524CEED3C008C531A /* GetCrimesWithNoLocationTests.swift */,
 				047B6CEC24CEF76B008C531A /* GetCrimeDataAvailabilityTests.swift */,
 				047B6D0124CF56C2008C531A /* GetCrimeByLocationTests.swift */,
+				047B6D1324D0728A008C531A /* GetCrimeByCustomLocationTests.swift */,
 			);
 			name = Crime;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				04EFA8CA24CD95D30090D581 /* XCTestCaseBase.swift in Sources */,
 				04EFA91024CE2C810090D581 /* GetNeighbourhoodDetailsTests.swift in Sources */,
 				04EFA8E524CDE4AD0090D581 /* GetSpecificForceTests.swift in Sources */,
+				047B6D1424D0728A008C531A /* GetCrimeByCustomLocationTests.swift in Sources */,
 				047B6CED24CEF76B008C531A /* GetCrimeDataAvailabilityTests.swift in Sources */,
 				047B6CFA24CF1BFA008C531A /* GetStopAndSearchByLocationTets.swift in Sources */,
 				04EFA8F324CDFC5A0090D581 /* GetCrimeOutcomeTests.swift in Sources */,
