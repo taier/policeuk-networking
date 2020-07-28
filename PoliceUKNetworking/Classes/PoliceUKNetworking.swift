@@ -28,6 +28,7 @@ public class PoliceUKNetworking {
   let policeUKNeighbourhoodTeamGateway = PoliceUKNeighbourhoodTeamGateway()
   let policeUKSpecificNeighbourhoodGateway = PoliceUKSpecificNeighbourhoodGateway()
   let policeUKLocateNeighbourhoodGateway = PoliceUKLocateNeighbourhoodGateway()
+  let policeUKNeighbourhoodBoundaryGateway = PoliceUKNeighbourhoodBoundaryGateway()
   
   // Stop and Search
   let policeUKStopAndSearchByForceGateway = PoliceUKStopAndSearchByForceGateway()
@@ -230,6 +231,21 @@ public class PoliceUKNetworking {
       .getSingle(shared.sessionManager,
                  forLatitude: forLatitude,
                  forLongitude: forLongitude)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getNeighbourhoodBoundary(forForce: String,
+                                              forNeighbourhood: String,
+                                              completion:
+    @escaping (([PoliceUKNeighbourhoodBoundaryEntity]?, Error?)->Void)) {
+    shared.policeUKNeighbourhoodBoundaryGateway
+      .getSingle(shared.sessionManager,
+                 forForce: forForce,
+                 forNeighbourhood: forNeighbourhood)
       .subscribe(onSuccess: { response in
         completion(response, nil)
       }) { error in

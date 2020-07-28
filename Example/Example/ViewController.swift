@@ -116,5 +116,11 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getNeighbourhoodBoundary(forForce: "city-of-london", forNeighbourhood: "cp") { response, error in
+      print("------------------ getNeighbourhoodByLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }

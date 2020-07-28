@@ -88,6 +88,10 @@ public class PoliceUKEndpoints {
     return "\(APIUrl)/\(force)/\(neighbourhood)"
   }
   
+  public static func neighbourhoodBoundary(force: String, neighbourhood: String) -> String {
+     return "\(APIUrl)/\(force)/\(neighbourhood)/boundary"
+   }
+  
   public static func locateNeighbourhood(lat: String,
                                          lng: String) -> String {
     return "\(APIUrl)/locate-neighbourhood?q=\(lat),\(lng)"
