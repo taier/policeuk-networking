@@ -27,6 +27,34 @@ public class PoliceUKEndpoints {
     return "\(APIUrl)/outcomes-for-crime/\(crime)"
   }
   
+  public static func crimeOutcomeByLocation(locationID: String,
+                                            date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/outcomes-at-location?date=\(date)&location_id=\(locationID)"
+    } else {
+      return "\(APIUrl)/outcomes-at-location?location_id=\(locationID)"
+    }
+  }
+  
+  public static func crimeOutcomeByCustomLocation(lat: String,
+                                                  lng: String,
+                                                  date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/outcomes-at-location?date=\(date)&lat=\(lat)&lng=\(lng)"
+    } else {
+      return "\(APIUrl)/outcomes-at-location?lat=\(lat)&lng=\(lng)"
+    }
+  }
+  
+  public static func crimeOutcomeByCustomLocation(poly: [String],
+                                                  date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/outcomes-at-location?date=\(date)&poly=\(poly.joined(separator: ":"))"
+    } else {
+      return "\(APIUrl)/outcomes-at-location?poly=\(poly.joined(separator: ":"))"
+    }
+  }
+  
   public static func crimesWithNoLocation(crimeCategory: String,
                                           force: String,
                                           date: String?) -> String {
