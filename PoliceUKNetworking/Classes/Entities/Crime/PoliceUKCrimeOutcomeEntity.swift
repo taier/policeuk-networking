@@ -21,11 +21,17 @@ public struct PoliceUKCrimeOutcomeEntity: Codable, Equatable {
 public struct PoliceUKCrimeOutcome: Codable, Equatable {
   public let date: String?
   public let person_id: String?
+  public let category: PoliceUKCrimeOutcomeCategory?
+  public let crime: PoliceUKCrimeEntitiy? // TODO only for a crime outcome by location
   
   public init(date: String? = nil,
-              person_id: String? = nil) {
+              person_id: String? = nil,
+              category: PoliceUKCrimeOutcomeCategory? = nil,
+              crime: PoliceUKCrimeEntitiy? = nil) {
     self.date = date
     self.person_id = person_id
+    self.category = category
+    self.crime = crime
   }
 }
 

@@ -140,5 +140,25 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getCrimeOutcomeByLocation(forLocationID: "883498",
+                                                 forDate: "2020-05")
+    { response, error in
+      print("------------------ getCrimeOutcomeByLocation ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getCrimeOutcomeByCustomLocation(forLatitude: "52.629729", forLongitude: "-1.131592", forDate: "2020-03") { response, error in
+      print("------------------ getCrimeOutcomeByCustomLocation ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getCrimeOutcomeByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"], forDate: "2020-03") { response, error in
+      print("------------------ getCrimeOutcomeByCustomLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }
