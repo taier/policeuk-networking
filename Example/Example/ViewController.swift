@@ -122,5 +122,23 @@ class ViewController: UIViewController {
       print(response)
       print(error)
     }
+    
+    PoliceUKNetworking.getCrimeByCustomLocation(forLatitude: "52.629729",
+                                                forLongitude: "-1.131592",
+                                                forCrimeCategory: "burglary",
+                                                forDate: "2020-01")
+    { response, error in
+      print("------------------ getCrimeByCustomLocation ------------------")
+      print(response)
+      print(error)
+    }
+    
+    PoliceUKNetworking.getCrimeByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"],
+                                                forDate: "2020-01")
+    { response, error in
+      print("------------------ getCrimeByCustomLocation ------------------")
+      print(response)
+      print(error)
+    }
   }
 }

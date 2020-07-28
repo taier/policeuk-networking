@@ -56,6 +56,27 @@ public class PoliceUKEndpoints {
     }
   }
   
+  public static func crimeByCustomLocation(lat: String,
+                                           lng: String,
+                                           crimeCategory: String,
+                                           date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/crimes-street/\(crimeCategory)?lat=\(lat)&lng=\(lng)&date=\(date)"
+    } else {
+      return "\(APIUrl)/crimes-street/\(crimeCategory)?lat=\(lat)&lng=\(lng)"
+    }
+  }
+  
+  public static func crimeByCustomLocation(poly: [String],
+                                           crimeCategory: String,
+                                           date: String?) -> String {
+    if let date = date {
+      return "\(APIUrl)/crimes-street/\(crimeCategory)?poly=\(poly.joined(separator: ":"))&date=\(date)"
+    } else {
+      return "\(APIUrl)/crimes-street/\(crimeCategory)?poly=\(poly.joined(separator: ":"))"
+    }
+  }
+  
   public static func crimeDataAvailability() -> String {
     return "\(APIUrl)/crimes-street-dates"
   }
@@ -89,8 +110,8 @@ public class PoliceUKEndpoints {
   }
   
   public static func neighbourhoodBoundary(force: String, neighbourhood: String) -> String {
-     return "\(APIUrl)/\(force)/\(neighbourhood)/boundary"
-   }
+    return "\(APIUrl)/\(force)/\(neighbourhood)/boundary"
+  }
   
   public static func locateNeighbourhood(lat: String,
                                          lng: String) -> String {

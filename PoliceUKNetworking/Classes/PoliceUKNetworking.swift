@@ -6,6 +6,8 @@ import RxSwift
 public class PoliceUKNetworking {
   
   static let shared = PoliceUKNetworking()
+  public static let defaultCrimeCategory = "all-crime"
+  
   private let disposeBag = DisposeBag()
   private var sessionManager: Session = AF //default alomafire session manager
   
@@ -16,6 +18,7 @@ public class PoliceUKNetworking {
   let policeUKCrimesWithNoLocationGateway = PoliceUKCrimesWithNoLocationGateway()
   let policeUKCrimeDataAvailabilityGateway = PoliceUKCrimeDataAvailabilityGateway()
   let policeUKCrimeByLocationGateway = PoliceUKCrimeByLocationGateway()
+  let policeUKCrimeByCustomLocationGateway = PoliceUKCrimeByCustomLocationGateway()
   
   // Force
   let policeUKForcesListGateway = PoliceUKForcesListGateway()
@@ -113,7 +116,43 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimesWithNoLocation(forCrimeCategory: String,
+  public static func getCrimeByCustomLocation(forLatitude: String,
+                                              forLongitude: String,
+                                              forCrimeCategory: String = defaultCrimeCategory,
+                                              forDate: String? = nil,
+                                              completion:
+    @escaping (([PoliceUKCrimeEntitiy]?, Error?)->Void)) {
+    shared.policeUKCrimeByCustomLocationGateway
+      .getSingle(shared.sessionManager,
+                 forLatitude: forLatitude,
+                 forLongitude: forLongitude,
+                 forCrimeCategory: forCrimeCategory,
+                 forDate: forDate)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getCrimeByCustomLocation(forPoly: [String],
+                                              forCrimeCategory: String = defaultCrimeCategory,
+                                              forDate: String? = nil,
+                                              completion:
+    @escaping (([PoliceUKCrimeEntitiy]?, Error?)->Void)) {
+    shared.policeUKCrimeByCustomLocationGateway
+      .getSingle(shared.sessionManager,
+                 forPoly: forPoly,
+                 forCrimeCategory: forCrimeCategory,
+                 forDate: forDate)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getCrimesWithNoLocation(forCrimeCategory: String = defaultCrimeCategory,
                                              forForce: String,
                                              forDate: String? = nil,
                                              completion:
