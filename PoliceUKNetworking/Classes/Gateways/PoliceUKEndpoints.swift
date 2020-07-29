@@ -164,6 +164,25 @@ public class PoliceUKEndpoints {
     return composed
   }
   
+  public static func stopAndSearchByCustomLocation(lat: String,
+                                                   lng: String,
+                                                   date: String?) -> String {
+    var composed = "\(APIUrl)/stops-street?lat=\(lat)&lng=\(lng)"
+    if let date = date {
+      composed = "\(composed)&date=\(date)"
+    }
+    return composed
+  }
+  
+  public static func stopAndSearchByCustomLocation(poly: [String],
+                                                   date: String?) -> String {
+    var composed = "\(APIUrl)/stops-street?poly=\(poly.joined(separator: ":"))"
+    if let date = date {
+      composed = "\(composed)&date=\(date)"
+    }
+    return composed
+  }
+  
   public static func stopAndSearchWithNoLocation(force: String,
                                                  date: String?) -> String {
     var composed = "\(APIUrl)/stops-force?force=\(force)"

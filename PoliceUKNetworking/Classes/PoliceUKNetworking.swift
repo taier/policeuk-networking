@@ -41,6 +41,7 @@ public class PoliceUKNetworking {
   let policeUKStopAndSearchByForceGateway = PoliceUKStopAndSearchByForceGateway()
   let policeUKStopAndSearchByLocationGateway = PoliceUKStopAndSearchByLocationGateway()
   let policeUKStopAndSearchWithNoLocationGateway = PoliceUKStopAndSearchWithNoLocationGateway()
+  let policeUKStopAndSearchByCustomLocationGateway = PoliceUKStopAndSearchByCustomLocationGateway()
   
   public static func getCrimeDBLaseUpdateDate(completion:
     @escaping ((PoliceUKCrimeLastUpdatedEntity?, Error?)->Void)) {
@@ -365,6 +366,38 @@ public class PoliceUKNetworking {
     shared.policeUKStopAndSearchByLocationGateway
       .getSingle(shared.sessionManager,
                  forLocationID: forLocationID,
+                 forDate: forDate)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getStopAndSearchByCustomLocation(forLatitude: String,
+                                                      forLongitude: String,
+                                                      forDate: String? = nil,
+                                                      completion:
+    @escaping (([PoliceUKStopAndSearchEntity]?, Error?)->Void)) {
+    shared.policeUKStopAndSearchByCustomLocationGateway
+      .getSingle(shared.sessionManager,
+                 forLatitude: forLatitude,
+                 forLongitude: forLongitude,
+                 forDate: forDate)
+      .subscribe(onSuccess: { response in
+        completion(response, nil)
+      }) { error in
+        completion(nil, error)
+    }.disposed(by: shared.disposeBag)
+  }
+  
+  public static func getStopAndSearchByCustomLocation(forPoly: [String],
+                                                      forDate: String? = nil,
+                                                      completion:
+    @escaping (([PoliceUKStopAndSearchEntity]?, Error?)->Void)) {
+    shared.policeUKStopAndSearchByCustomLocationGateway
+      .getSingle(shared.sessionManager,
+                 forPoly: forPoly,
                  forDate: forDate)
       .subscribe(onSuccess: { response in
         completion(response, nil)
