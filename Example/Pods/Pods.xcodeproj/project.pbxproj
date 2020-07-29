@@ -30,6 +30,7 @@
 		047B6D1224D0496C008C531A /* PoliceUKCrimeByCustomLocationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D1124D0496C008C531A /* PoliceUKCrimeByCustomLocationGateway.swift */; };
 		047B6D1624D09CD5008C531A /* PoliceUKCrimeOutcomeByLocationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D1524D09CD5008C531A /* PoliceUKCrimeOutcomeByLocationGateway.swift */; };
 		047B6D1824D0A2E4008C531A /* PoliceUKCrimeOutcomeByCustomLocationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D1724D0A2E4008C531A /* PoliceUKCrimeOutcomeByCustomLocationGateway.swift */; };
+		047B6D1E24D0BBB6008C531A /* PoliceUKStopAndSearchByCustomLocationGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B6D1D24D0BBB6008C531A /* PoliceUKStopAndSearchByCustomLocationGateway.swift */; };
 		04EFA8CF24CDA3240090D581 /* PoliceUKCrimeCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8CE24CDA3240090D581 /* PoliceUKCrimeCategoryEntity.swift */; };
 		04EFA8D524CDB54C0090D581 /* PoliceUKCrimeCategoriesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8D324CDB54B0090D581 /* PoliceUKCrimeCategoriesGateway.swift */; };
 		04EFA8D624CDB54C0090D581 /* PoliceUKCrimeLastUpdatedGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFA8D424CDB54B0090D581 /* PoliceUKCrimeLastUpdatedGateway.swift */; };
@@ -510,6 +511,7 @@
 		047B6D1124D0496C008C531A /* PoliceUKCrimeByCustomLocationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeByCustomLocationGateway.swift; sourceTree = "<group>"; };
 		047B6D1524D09CD5008C531A /* PoliceUKCrimeOutcomeByLocationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeOutcomeByLocationGateway.swift; sourceTree = "<group>"; };
 		047B6D1724D0A2E4008C531A /* PoliceUKCrimeOutcomeByCustomLocationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeOutcomeByCustomLocationGateway.swift; sourceTree = "<group>"; };
+		047B6D1D24D0BBB6008C531A /* PoliceUKStopAndSearchByCustomLocationGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKStopAndSearchByCustomLocationGateway.swift; sourceTree = "<group>"; };
 		04EFA8CE24CDA3240090D581 /* PoliceUKCrimeCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeCategoryEntity.swift; sourceTree = "<group>"; };
 		04EFA8D324CDB54B0090D581 /* PoliceUKCrimeCategoriesGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeCategoriesGateway.swift; sourceTree = "<group>"; };
 		04EFA8D424CDB54B0090D581 /* PoliceUKCrimeLastUpdatedGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliceUKCrimeLastUpdatedGateway.swift; sourceTree = "<group>"; };
@@ -1002,6 +1004,7 @@
 				047B6CEF24CEFDD1008C531A /* PoliceUKStopAndSearchByForceGateway.swift */,
 				047B6CF724CF14E7008C531A /* PoliceUKStopAndSearchByLocationGateway.swift */,
 				047B6CFB24CF3A49008C531A /* PoliceUKStopAndSearchWithNoLocationGateway.swift */,
+				047B6D1D24D0BBB6008C531A /* PoliceUKStopAndSearchByCustomLocationGateway.swift */,
 			);
 			path = StopAndSearch;
 			sourceTree = "<group>";
@@ -2244,6 +2247,7 @@
 				04EFA8FD24CE1CC70090D581 /* PoliceUKListOfNeighbourhoodsForForceGateway.swift in Sources */,
 				047B6D0624CF7594008C531A /* PoliceUKLocateNeighbourhoodEntity.swift in Sources */,
 				047B6CE924CEF3BE008C531A /* PoliceUKCrimeDataAvailabilityEntity.swift in Sources */,
+				047B6D1E24D0BBB6008C531A /* PoliceUKStopAndSearchByCustomLocationGateway.swift in Sources */,
 				047B6CF024CEFDD1008C531A /* PoliceUKStopAndSearchByForceGateway.swift in Sources */,
 				04EFA8E924CDECE00090D581 /* PoliceUKSeniorOfficerEntity.swift in Sources */,
 				047B6D0424CF7519008C531A /* PoliceUKLocateNeighbourhoodGateway.swift in Sources */,
