@@ -26,7 +26,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
                                                        id: 123,
                                                        location_subtype: "location-subtype-test",
                                                        month: "month-test",
-                                                       outcome_status: PoliceUKCrimeOutcomeStatus(category: "category-test",
+                                                       outcome_status: PoliceUKCrimeOutcomeStatusEntity(category: "category-test",
                                                                                                   date: "date-test"))]
   func testSuccessByPoly() {
     let requestExpectation = expectation(description: "Request should finish")

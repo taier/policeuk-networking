@@ -15,8 +15,8 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
   public let id: Int?
   public let location_subtype: String?
   public let month: String?
-  public let location: PoliceUKCrimeLocation?
-  public let outcome_status: PoliceUKCrimeOutcomeStatus? //TODO would not exist for Outcome
+  public let location: PoliceUKCrimeLocationEntity?
+  public let outcome_status: PoliceUKCrimeOutcomeStatusEntity? //TODO would not exist for Outcome
   
   public init(category: String? = nil,
               location_type: String? = nil,
@@ -25,8 +25,8 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
               id: Int? = nil,
               location_subtype: String? = nil,
               month: String? = nil,
-              location: PoliceUKCrimeLocation? = nil,
-              outcome_status: PoliceUKCrimeOutcomeStatus? = nil) {
+              location: PoliceUKCrimeLocationEntity? = nil,
+              outcome_status: PoliceUKCrimeOutcomeStatusEntity? = nil) {
     self.category = category
     self.location_type = location_type
     self.context = context
@@ -39,21 +39,21 @@ public struct PoliceUKCrimeEntitiy: Codable, Equatable {
   }
 }
 
-public struct PoliceUKCrimeLocation: Codable, Equatable {
+public struct PoliceUKCrimeLocationEntity: Codable, Equatable {
   public let latitude: String?
   public let longitude: String?
-  public let street: PoliceUKCrimeLocationStreet?
+  public let street: PoliceUKCrimeLocationStreetEntity?
   
   public init(latitude: String? = nil,
               longitude: String? = nil,
-              street: PoliceUKCrimeLocationStreet? = nil) {
+              street: PoliceUKCrimeLocationStreetEntity? = nil) {
     self.latitude = latitude
     self.longitude = longitude
     self.street = street
   }
 }
 
-public struct PoliceUKCrimeLocationStreet: Codable, Equatable {
+public struct PoliceUKCrimeLocationStreetEntity: Codable, Equatable {
   public let id: Int?
   public let name: String?
   
@@ -64,7 +64,7 @@ public struct PoliceUKCrimeLocationStreet: Codable, Equatable {
   }
 }
 
-public struct PoliceUKCrimeOutcomeStatus: Codable, Equatable {
+public struct PoliceUKCrimeOutcomeStatusEntity: Codable, Equatable {
   public let category: String
   public let date: String
   

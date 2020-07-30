@@ -19,6 +19,6 @@ public struct PoliceUKCrimeDataAvailabilityEntity: Codable, Equatable {
   
   enum CodingKeys: String, CodingKey {
     case date = "date"
-    case forces = "stop-and-search" //TODO add info about that
+    case forces = "stop-and-search" // "-" cant be parsed because it's invalid as a variable name in swift
   }
 }

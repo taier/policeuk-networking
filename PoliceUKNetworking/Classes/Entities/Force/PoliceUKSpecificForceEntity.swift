@@ -13,14 +13,14 @@ public struct PoliceUKSpecificForceEntity: Codable, Equatable {
   public let description: String?
   public let url: String?
   public let telephone: String?
-  public let engagement_methods: [PoliceUKSpecificForceEngagementMethod]?
+  public let engagement_methods: [PoliceUKSpecificForceEngagementMethodEntity]?
   
   public init(id: String,
               name: String,
               description: String? = nil,
               url: String? = nil,
               telephone: String? = nil,
-              engagement_methods: [PoliceUKSpecificForceEngagementMethod]? = nil) {
+              engagement_methods: [PoliceUKSpecificForceEngagementMethodEntity]? = nil) {
     self.id = id
     self.name = name
     self.description = description
@@ -30,7 +30,7 @@ public struct PoliceUKSpecificForceEntity: Codable, Equatable {
   }
 }
 
-public struct PoliceUKSpecificForceEngagementMethod: Codable, Equatable {
+public struct PoliceUKSpecificForceEngagementMethodEntity: Codable, Equatable {
   public let url: String?
   public let type: String?
   public let description: String?

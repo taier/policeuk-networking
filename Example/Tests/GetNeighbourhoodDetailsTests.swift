@@ -21,12 +21,12 @@ class GetNeighbourhoodDetailsTests: XCTestCaseBase {
                                                                     id: "id-test",
                                                                     population: "population-test",
                                                                     welcome_message: "welcome_message-test",
-                                                                    contact_details: PoliceUKNeighbourhoodContactDetails(twitter:"twitter-test"),
-                                                                    links: [PoliceUKNeighbourhoodLink(url: "url-test",
+                                                                    contact_details: PoliceUKNeighbourhoodContactDetailsEntity(twitter:"twitter-test"),
+                                                                    links: [PoliceUKNeighbourhoodLinkEntity(url: "url-test",
                                                                                                       description: "description-test",
                                                                                                       title: "title-test")],
-                                                                    centre: PoliceUKNeighbourhoodCentre(latitude: "latitude-test"),
-                                                                    locations: [PoliceUKNeighbourhoodLocation(name:"name-test")])
+                                                                    centre: PoliceUKNeighbourhoodCentreEntity(latitude: "latitude-test"),
+                                                                    locations: [PoliceUKNeighbourhoodLocationEntity(name:"name-test")])
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodDetails(force: requestParamForce,
                                                                                neighbourhood: requestParamNeibourhood))!
   

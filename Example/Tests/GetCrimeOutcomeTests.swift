@@ -14,7 +14,7 @@ import PoliceUKNetworking
 class GetCrimeOutcomeTests: XCTestCaseBase {
   
   private static let requestParam = "crimeid-test"
-  private let expectedResponse = PoliceUKCrimeOutcomeEntity(outcomes: [PoliceUKCrimeOutcome(date: "2020-10",
+  private let expectedResponse = PoliceUKCrimeOutcomeRootEntity(outcomes: [PoliceUKCrimeOutcomeEntity(date: "2020-10",
                                                                                             person_id: "personid-test")],
                                                             crime: PoliceUKCrimeEntitiy(category: "category-test",
                                                                                         location_type: "location-type-test",
@@ -23,9 +23,9 @@ class GetCrimeOutcomeTests: XCTestCaseBase {
                                                                                         id: 123,
                                                                                         location_subtype: "location-subtype-tesst",
                                                                                         month: "2020-10",
-                                                                                        location: PoliceUKCrimeLocation(latitude: "latitude-test",
+                                                                                        location: PoliceUKCrimeLocationEntity(latitude: "latitude-test",
                                                                                                                         longitude: "longitude-test",
-                                                                                                                        street: PoliceUKCrimeLocationStreet(id: 111,
+                                                                                                                        street: PoliceUKCrimeLocationStreetEntity(id: 111,
                                                                                                                                                             name: "name-test"))))
   private let apiEndpoint = URL(string: PoliceUKEndpoints.crimeOutcome(crime: requestParam))!
   

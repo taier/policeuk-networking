@@ -7,26 +7,26 @@
 
 import Foundation
 
-public struct PoliceUKCrimeOutcomeEntity: Codable, Equatable {
-  public let outcomes: [PoliceUKCrimeOutcome]?
+public struct PoliceUKCrimeOutcomeRootEntity: Codable, Equatable {
+  public let outcomes: [PoliceUKCrimeOutcomeEntity]?
   public let crime: PoliceUKCrimeEntitiy?
   
-  public init(outcomes: [PoliceUKCrimeOutcome]? = nil,
+  public init(outcomes: [PoliceUKCrimeOutcomeEntity]? = nil,
               crime: PoliceUKCrimeEntitiy? = nil) {
     self.outcomes = outcomes
     self.crime = crime
   }
 }
 
-public struct PoliceUKCrimeOutcome: Codable, Equatable {
+public struct PoliceUKCrimeOutcomeEntity: Codable, Equatable {
   public let date: String?
   public let person_id: String?
-  public let category: PoliceUKCrimeOutcomeCategory?
+  public let category: PoliceUKCrimeOutcomeCategoryEntity?
   public let crime: PoliceUKCrimeEntitiy? // TODO only for a crime outcome by location
   
   public init(date: String? = nil,
               person_id: String? = nil,
-              category: PoliceUKCrimeOutcomeCategory? = nil,
+              category: PoliceUKCrimeOutcomeCategoryEntity? = nil,
               crime: PoliceUKCrimeEntitiy? = nil) {
     self.date = date
     self.person_id = person_id
@@ -35,7 +35,7 @@ public struct PoliceUKCrimeOutcome: Codable, Equatable {
   }
 }
 
-public struct PoliceUKCrimeOutcomeCategory: Codable, Equatable {
+public struct PoliceUKCrimeOutcomeCategoryEntity: Codable, Equatable {
   public let code: String?
   public let name: String?
   

@@ -19,7 +19,7 @@ class GetSpecificForceTests: XCTestCaseBase {
                                                              description: "description-test",
                                                              url: "url-test",
                                                              telephone: "101",
-                                                             engagement_methods: [PoliceUKSpecificForceEngagementMethod(url: "url-test",
+                                                             engagement_methods: [PoliceUKSpecificForceEngagementMethodEntity(url: "url-test",
                                                                                                                         type: "type-test",
                                                                                                                         description: "description-test",
                                                                                                                         title: "title-test")])

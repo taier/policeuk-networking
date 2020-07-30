@@ -11,12 +11,12 @@ public struct PoliceUKSeniorOfficerEntity: Codable, Equatable {
   public let bio: String?
   public let name: String?
   public let rank: String?
-  public let contact_details: PoliceUKSeniorOfficerContactDetails?
+  public let contact_details: PoliceUKSeniorOfficerContactDetailsEntity?
   
   public init(bio: String?,
               name: String?,
               rank: String?,
-              contact_details: PoliceUKSeniorOfficerContactDetails?) {
+              contact_details: PoliceUKSeniorOfficerContactDetailsEntity?) {
     self.bio = bio
     self.name = name
     self.rank = rank
@@ -24,7 +24,7 @@ public struct PoliceUKSeniorOfficerEntity: Codable, Equatable {
   }
 }
 
-public struct PoliceUKSeniorOfficerContactDetails: Codable, Equatable {
+public struct PoliceUKSeniorOfficerContactDetailsEntity: Codable, Equatable {
   public let email: String?
   public let telephone: String?
   public let mobile: String?

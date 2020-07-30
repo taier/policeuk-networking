@@ -16,9 +16,9 @@ class GetCrimeOutcomeByLocationTests: XCTestCaseBase {
   
   private let requestParamLocationID = "location-id-test"
   private let requestParamDate = "date-test"
-  private let expectedResponse = [PoliceUKCrimeOutcome(date: "2020-10",
+  private let expectedResponse = [PoliceUKCrimeOutcomeEntity(date: "2020-10",
                                                        person_id: "personid-test",
-                                                       category: PoliceUKCrimeOutcomeCategory(code: "code-test",
+                                                       category: PoliceUKCrimeOutcomeCategoryEntity(code: "code-test",
                                                                                               name: "name-test"),
                                                        crime: PoliceUKCrimeEntitiy(category: "category-test",
                                                                                    location_type: "location-type-test",
