@@ -26,7 +26,7 @@ public struct PoliceUKNeighbourhoodPrioritiesEntity: Codable, Equatable {
   enum CodingKeys: String, CodingKey {
     case action = "action"
     case issue = "issue"
-    case issue_date = "issue-date"
-    case action_date = "action-date"
+    case issue_date = "issue-date" // "-" cant be parsed because it's invalid as a variable name in swift
+    case action_date = "action-date" // "-" cant be parsed because it's invalid as a variable name in swift
   }
 }

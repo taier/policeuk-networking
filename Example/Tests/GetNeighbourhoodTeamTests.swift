@@ -18,7 +18,7 @@ class GetNeighbourhoodTeamTests: XCTestCaseBase {
   private let expectedResponse = [PoliceUKNeighbourhoodTeamEntity(bio: "bio-test",
                                                                   name: "name-test",
                                                                   rank: "rank-text",
-                                                                  contact_details: PoliceUKNeighbourhoodTeamContactDetails(twitter:"twitter-test"))]
+                                                                  contact_details: PoliceUKNeighbourhoodTeamContactDetailsEntity(twitter:"twitter-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodTeam(force: requestParamForce,
                                                                                   neighbourhood: requestParamNeibourhood))!
   

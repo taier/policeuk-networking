@@ -17,7 +17,7 @@ class GetSeniorOfficersTests: XCTestCaseBase {
   private let expectedResponse = [PoliceUKSeniorOfficerEntity(bio: "bio-test",
                                                              name: "name-test",
                                                              rank: "rank-text",
-                                                             contact_details: PoliceUKSeniorOfficerContactDetails(twitter:"twitter-test"))]
+                                                             contact_details: PoliceUKSeniorOfficerContactDetailsEntity(twitter:"twitter-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.seniorOfficers(force: requestParam))!
   
   func testSuccess() {

@@ -19,7 +19,7 @@ public struct PoliceUKStopAndSearchEntity: Codable, Equatable {
   public let involved_person: Bool?
   public let gender: String?
   public let legislation: String?
-  public let location: PoliceUKCrimeLocation?
+  public let location: PoliceUKCrimeLocationEntity?
   public let outcome: String?
   public let type: String?
   public let operation_name: String?
@@ -35,7 +35,7 @@ public struct PoliceUKStopAndSearchEntity: Codable, Equatable {
               involved_person: Bool? = nil,
               gender: String? = nil,
               legislation: String? = nil,
-              location: PoliceUKCrimeLocation? = nil,
+              location: PoliceUKCrimeLocationEntity? = nil,
               outcome: String? = nil,
               type: String? = nil,
               operation_name: String? = nil) {

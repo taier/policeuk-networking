@@ -13,11 +13,11 @@ import Alamofire
 class PoliceUKCrimeOutcomeByLocationGateway {
   func getSingle(_ networking: Session,
                  forLocationID: String,
-                 forDate: String?) -> Single<[PoliceUKCrimeOutcome]> {
+                 forDate: String?) -> Single<[PoliceUKCrimeOutcomeEntity]> {
     return Single.create { emitter in
       networking.request(PoliceUKEndpoints.crimeOutcomeByLocation(locationID: forLocationID,
                                                                   date: forDate))
-        .responseDecodable(of: [PoliceUKCrimeOutcome].self)
+        .responseDecodable(of: [PoliceUKCrimeOutcomeEntity].self)
         { response in
           if let entity = response.value {
             emitter(.success(entity))

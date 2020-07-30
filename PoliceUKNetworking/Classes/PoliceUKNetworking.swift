@@ -79,7 +79,7 @@ public class PoliceUKNetworking {
   
   public static func getCrimeOutcome(forCrime: String,
                                      completion:
-    @escaping ((PoliceUKCrimeOutcomeEntity?, Error?)->Void)) {
+    @escaping ((PoliceUKCrimeOutcomeRootEntity?, Error?)->Void)) {
     shared.policeUKCimeOutcomeGateway
       .getSingle(shared.sessionManager, forCrime: forCrime)
       .subscribe(onSuccess: { response in
@@ -92,7 +92,7 @@ public class PoliceUKNetworking {
   public static func getCrimeOutcomeByLocation(forLocationID: String,
                                                forDate: String? = nil,
                                                completion:
-    @escaping (([PoliceUKCrimeOutcome]?, Error?)->Void)) {
+    @escaping (([PoliceUKCrimeOutcomeEntity]?, Error?)->Void)) {
     shared.policeUKCrimeOutcomeByLocationGateway
       .getSingle(shared.sessionManager,
                  forLocationID: forLocationID,
@@ -108,7 +108,7 @@ public class PoliceUKNetworking {
                                                      forLongitude: String,
                                                      forDate: String? = nil,
                                                      completion:
-    @escaping (([PoliceUKCrimeOutcome]?, Error?)->Void)) {
+    @escaping (([PoliceUKCrimeOutcomeEntity]?, Error?)->Void)) {
     shared.policeUKCrimeOutcomeByCustomLocationGateway
       .getSingle(shared.sessionManager,
                  forLatitude: forLatitude,
@@ -124,7 +124,7 @@ public class PoliceUKNetworking {
   public static func getCrimeOutcomeByCustomLocation(forPoly: [String],
                                                      forDate: String? = nil,
                                                      completion:
-    @escaping (([PoliceUKCrimeOutcome]?, Error?)->Void)) {
+    @escaping (([PoliceUKCrimeOutcomeEntity]?, Error?)->Void)) {
     shared.policeUKCrimeOutcomeByCustomLocationGateway
       .getSingle(shared.sessionManager,
                  forPoly: forPoly,

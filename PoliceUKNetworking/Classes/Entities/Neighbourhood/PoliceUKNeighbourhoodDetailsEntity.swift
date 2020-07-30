@@ -14,10 +14,10 @@ public struct PoliceUKNeighbourhoodDetailsEntity: Codable, Equatable {
   public let id: String?
   public let population: String?
   public let welcome_message: String?
-  public let contact_details: PoliceUKNeighbourhoodContactDetails?
-  public let links: [PoliceUKNeighbourhoodLink]?
-  public let centre: PoliceUKNeighbourhoodCentre?
-  public let locations: [PoliceUKNeighbourhoodLocation]?
+  public let contact_details: PoliceUKNeighbourhoodContactDetailsEntity?
+  public let links: [PoliceUKNeighbourhoodLinkEntity]?
+  public let centre: PoliceUKNeighbourhoodCentreEntity?
+  public let locations: [PoliceUKNeighbourhoodLocationEntity]?
   
   public init(url_force: String? = nil,
               name: String? = nil,
@@ -25,10 +25,10 @@ public struct PoliceUKNeighbourhoodDetailsEntity: Codable, Equatable {
               id: String? = nil,
               population: String? = nil,
               welcome_message: String? = nil,
-              contact_details: PoliceUKNeighbourhoodContactDetails? = nil,
-              links: [PoliceUKNeighbourhoodLink]? = nil,
-              centre: PoliceUKNeighbourhoodCentre? = nil,
-              locations: [PoliceUKNeighbourhoodLocation]? = nil) {
+              contact_details: PoliceUKNeighbourhoodContactDetailsEntity? = nil,
+              links: [PoliceUKNeighbourhoodLinkEntity]? = nil,
+              centre: PoliceUKNeighbourhoodCentreEntity? = nil,
+              locations: [PoliceUKNeighbourhoodLocationEntity]? = nil) {
     self.url_force = url_force
     self.name = name
     self.description = description
@@ -42,7 +42,7 @@ public struct PoliceUKNeighbourhoodDetailsEntity: Codable, Equatable {
   }
 }
 
-public struct PoliceUKNeighbourhoodLocation: Codable, Equatable {
+public struct PoliceUKNeighbourhoodLocationEntity: Codable, Equatable {
   public let name: String?
   public let longitude: String?
   public let latitude: String?
@@ -71,7 +71,7 @@ public struct PoliceUKNeighbourhoodLocation: Codable, Equatable {
   }
 }
 
-public struct PoliceUKNeighbourhoodLink: Codable, Equatable {
+public struct PoliceUKNeighbourhoodLinkEntity: Codable, Equatable {
   public let url: String?
   public let description: String?
   public let title: String?
@@ -85,7 +85,7 @@ public struct PoliceUKNeighbourhoodLink: Codable, Equatable {
   }
 }
 
-public struct PoliceUKNeighbourhoodCentre: Codable, Equatable {
+public struct PoliceUKNeighbourhoodCentreEntity: Codable, Equatable {
   public let latitude: String?
   public let longitude: String?
   
@@ -96,7 +96,7 @@ public struct PoliceUKNeighbourhoodCentre: Codable, Equatable {
   }
 }
 
-public struct PoliceUKNeighbourhoodContactDetails: Codable, Equatable {
+public struct PoliceUKNeighbourhoodContactDetailsEntity: Codable, Equatable {
   public let email: String?
   public let telephone: String?
   public let mobile: String?

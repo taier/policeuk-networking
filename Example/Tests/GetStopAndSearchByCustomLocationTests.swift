@@ -29,7 +29,7 @@ class GetStopAndSearchByCustomLocationTests: XCTestCaseBase {
                                                               involved_person: false,
                                                               gender: "gender-test",
                                                               legislation: "legislation-test",
-                                                              location: PoliceUKCrimeLocation(latitude: "latitude-test",
+                                                              location: PoliceUKCrimeLocationEntity(latitude: "latitude-test",
                                                                                               longitude: "longitude-test",
                                                                                               street: nil),
                                                               outcome: "outcome-test",
