@@ -1,10 +1,4 @@
-//
-//  GetStopAndSearchByLocationTets.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import XCTest
@@ -28,8 +22,8 @@ class GetStopAndSearchByLocationTets: XCTestCaseBase {
                                                               gender: "gender-test",
                                                               legislation: "legislation-test",
                                                               location: PoliceUKCrimeLocationEntity(latitude: "latitude-test",
-                                                                                              longitude: "longitude-test",
-                                                                                              street: nil),
+                                                                                                    longitude: "longitude-test",
+                                                                                                    street: nil),
                                                               outcome: "outcome-test",
                                                               type: "type-test",
                                                               operation_name: "operation_name-test")]

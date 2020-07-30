@@ -1,10 +1,4 @@
-//
-//  GetForcesListTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -23,8 +17,8 @@ class GetNeighbourhoodDetailsTests: XCTestCaseBase {
                                                                     welcome_message: "welcome_message-test",
                                                                     contact_details: PoliceUKNeighbourhoodContactDetailsEntity(twitter:"twitter-test"),
                                                                     links: [PoliceUKNeighbourhoodLinkEntity(url: "url-test",
-                                                                                                      description: "description-test",
-                                                                                                      title: "title-test")],
+                                                                                                            description: "description-test",
+                                                                                                            title: "title-test")],
                                                                     centre: PoliceUKNeighbourhoodCentreEntity(latitude: "latitude-test"),
                                                                     locations: [PoliceUKNeighbourhoodLocationEntity(name:"name-test")])
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodDetails(force: requestParamForce,
@@ -38,7 +32,7 @@ class GetNeighbourhoodDetailsTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getNeighbourhoodDetails(forForce: GetNeighbourhoodDetailsTests.requestParamForce,
-                                            forNeighbourhood: GetNeighbourhoodDetailsTests.requestParamNeibourhood
+                                               forNeighbourhood: GetNeighbourhoodDetailsTests.requestParamNeibourhood
     ) { (response, error) in
       XCTAssertNotNil(response, "response is null on success")
       XCTAssertNil(error, "error is not null on success")
@@ -56,7 +50,7 @@ class GetNeighbourhoodDetailsTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getNeighbourhoodDetails(forForce: GetNeighbourhoodDetailsTests.requestParamForce,
-                                            forNeighbourhood: GetNeighbourhoodDetailsTests.requestParamNeibourhood
+                                               forNeighbourhood: GetNeighbourhoodDetailsTests.requestParamNeibourhood
     ) { (response, error) in
       XCTAssertNil(response, "response is not null on error")
       XCTAssertNotNil(error, "error is null on error")

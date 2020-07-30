@@ -1,10 +1,4 @@
-//
-//  GetStopAndSearchByCustomLocationTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 29/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import XCTest
@@ -30,8 +24,8 @@ class GetStopAndSearchByCustomLocationTests: XCTestCaseBase {
                                                               gender: "gender-test",
                                                               legislation: "legislation-test",
                                                               location: PoliceUKCrimeLocationEntity(latitude: "latitude-test",
-                                                                                              longitude: "longitude-test",
-                                                                                              street: nil),
+                                                                                                    longitude: "longitude-test",
+                                                                                                    street: nil),
                                                               outcome: "outcome-test",
                                                               type: "type-test",
                                                               operation_name: "operation_name-test")]
@@ -88,17 +82,17 @@ class GetStopAndSearchByCustomLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getStopAndSearchByCustomLocation(forPoly: requestParamPoly,
-                                                     forDate: requestParamDate) { (response, error) in
-                                                      XCTAssertNil(response, "response is not null on error")
-                                                      XCTAssertNotNil(error, "error is null on error")
-                                                      
-                                                      switch (error as? AFError) {
-                                                      case .some(.responseSerializationFailed(reason: .inputDataNilOrZeroLength)):
-                                                        break; // correct Error
-                                                      default:
-                                                        XCTFail("Wrong error")
-                                                      }
-                                                      requestExpectation.fulfill()
+                                                        forDate: requestParamDate) { (response, error) in
+                                                          XCTAssertNil(response, "response is not null on error")
+                                                          XCTAssertNotNil(error, "error is null on error")
+                                                          
+                                                          switch (error as? AFError) {
+                                                          case .some(.responseSerializationFailed(reason: .inputDataNilOrZeroLength)):
+                                                            break; // correct Error
+                                                          default:
+                                                            XCTFail("Wrong error")
+                                                          }
+                                                          requestExpectation.fulfill()
     }
     
     wait(for: [requestExpectation], timeout: 5.0)

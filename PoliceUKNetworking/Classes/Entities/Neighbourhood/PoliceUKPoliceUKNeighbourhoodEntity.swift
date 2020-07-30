@@ -1,9 +1,4 @@
-//
-//  PoliceUKPoliceUKNeighbourhoodEntity.swift
-//  PoliceUKNetworking
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//
+// Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 

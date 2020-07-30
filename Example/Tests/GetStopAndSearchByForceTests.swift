@@ -1,10 +1,4 @@
-//
-//  GetStopAndSearchTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -12,7 +6,7 @@ import Alamofire
 import PoliceUKNetworking
 
 class GetStopAndSearchByForceTets: XCTestCaseBase {
-
+  
   private static let requestParamForce = "force-test"
   private static let requestParamDate = "date-test"
   private let expectedResponse = [PoliceUKStopAndSearchEntity(age_range: "age-range-test",
@@ -27,8 +21,8 @@ class GetStopAndSearchByForceTets: XCTestCaseBase {
                                                               gender: "gender-test",
                                                               legislation: "legislation-test",
                                                               location: PoliceUKCrimeLocationEntity(latitude: "latitude-test",
-                                                                                              longitude: "longitude-test",
-                                                                                              street: nil),
+                                                                                                    longitude: "longitude-test",
+                                                                                                    street: nil),
                                                               outcome: "outcome-test",
                                                               type: "type-test",
                                                               operation_name: "operation_name-test")]
@@ -42,7 +36,7 @@ class GetStopAndSearchByForceTets: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getStopAndSearchByForce(forForce: GetStopAndSearchByForceTets.requestParamForce,
-                                        forDate: GetStopAndSearchByForceTets.requestParamDate
+                                               forDate: GetStopAndSearchByForceTets.requestParamDate
     ) { (response, error) in
       XCTAssertNotNil(response, "response is null on success")
       XCTAssertNil(error, "error is not null on success")
@@ -60,7 +54,7 @@ class GetStopAndSearchByForceTets: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getStopAndSearchByForce(forForce: GetStopAndSearchByForceTets.requestParamForce,
-                                        forDate: GetStopAndSearchByForceTets.requestParamDate
+                                               forDate: GetStopAndSearchByForceTets.requestParamDate
     ) { (response, error) in
       XCTAssertNil(response, "response is not null on error")
       XCTAssertNotNil(error, "error is null on error")

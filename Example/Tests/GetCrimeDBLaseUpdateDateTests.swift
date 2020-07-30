@@ -1,3 +1,5 @@
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
+
 import XCTest
 import Mocker
 import Alamofire
@@ -34,7 +36,7 @@ class GetCrimeDBLaseUpdateDateTests: XCTestCaseBase {
     PoliceUKNetworking.getCrimeDBLaseUpdateDate { (response, error) in
       XCTAssertNil(response, "response is not null on error")
       XCTAssertNotNil(error, "error is null on error")
-    
+      
       switch (error as? AFError) {
       case .some(.responseSerializationFailed(reason: .inputDataNilOrZeroLength)):
         break; // correct Error

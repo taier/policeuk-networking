@@ -1,10 +1,4 @@
-//
-//  GetForcesListTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -20,7 +14,7 @@ class GetNeighbourhoodTeamTests: XCTestCaseBase {
                                                                   rank: "rank-text",
                                                                   contact_details: PoliceUKNeighbourhoodTeamContactDetailsEntity(twitter:"twitter-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.neighbourhoodTeam(force: requestParamForce,
-                                                                                  neighbourhood: requestParamNeibourhood))!
+                                                                            neighbourhood: requestParamNeibourhood))!
   
   func testSuccess() {
     let requestExpectation = expectation(description: "Request should finish")

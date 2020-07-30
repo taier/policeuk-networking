@@ -1,10 +1,4 @@
-//
-//  ПetSeniorOfficersTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -15,9 +9,9 @@ class GetSeniorOfficersTests: XCTestCaseBase {
   
   private static let requestParam = "leicestershire"
   private let expectedResponse = [PoliceUKSeniorOfficerEntity(bio: "bio-test",
-                                                             name: "name-test",
-                                                             rank: "rank-text",
-                                                             contact_details: PoliceUKSeniorOfficerContactDetailsEntity(twitter:"twitter-test"))]
+                                                              name: "name-test",
+                                                              rank: "rank-text",
+                                                              contact_details: PoliceUKSeniorOfficerContactDetailsEntity(twitter:"twitter-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.seniorOfficers(force: requestParam))!
   
   func testSuccess() {

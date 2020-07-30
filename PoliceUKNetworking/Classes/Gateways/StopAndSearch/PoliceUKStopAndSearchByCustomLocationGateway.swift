@@ -1,9 +1,4 @@
-//
-//  PoliceUKStopAndSearchByCustomLocationGateway.swift
-//  PoliceUKNetworking
-//
-//  Created by Deniss Kaibagarovs on 28/07/2020.
-//
+// Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 

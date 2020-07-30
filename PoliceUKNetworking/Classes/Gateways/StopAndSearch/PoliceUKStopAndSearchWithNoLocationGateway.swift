@@ -1,9 +1,4 @@
-//
-//  PoliceUKStopAndSearchWithNoLocation.swift
-//  PoliceUKNetworking
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//
+// Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 
 import Foundation
@@ -19,11 +14,11 @@ class PoliceUKStopAndSearchWithNoLocationGateway {
       networking.request(PoliceUKEndpoints.stopAndSearchWithNoLocation(force: forForce, date: forDate))
         .responseDecodable(of: [PoliceUKStopAndSearchEntity].self)
         { response in
-        if let entity = response.value {
-          emitter(.success(entity))
-        } else if let error = response.error {
-          emitter(.error(error))
-        }
+          if let entity = response.value {
+            emitter(.success(entity))
+          } else if let error = response.error {
+            emitter(.error(error))
+          }
       }
       return Disposables.create {}
     }

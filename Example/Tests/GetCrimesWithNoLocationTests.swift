@@ -1,10 +1,4 @@
-//
-//  GetCrimesWithNoLocationTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -17,14 +11,14 @@ class GetCrimesWithNoLocationTests: XCTestCaseBase {
   private static let requestParamCrimeCategory = "category-test"
   private static let requestParamDate = "date-test"
   private let expectedResponse = [PoliceUKCrimeEntitiy(category: "category-test",
-                                                      location_type: "location-type-test",
-                                                      context: "contex-text",
-                                                      persistent_id: "persistent-id-test",
-                                                      id: 123,
-                                                      location_subtype: "location-subtype-test",
-                                                      month: "month-test",
-                                                      outcome_status: PoliceUKCrimeOutcomeStatusEntity(category: "category-test",
-                                                                                                 date: "date-test"))]
+                                                       location_type: "location-type-test",
+                                                       context: "contex-text",
+                                                       persistent_id: "persistent-id-test",
+                                                       id: 123,
+                                                       location_subtype: "location-subtype-test",
+                                                       month: "month-test",
+                                                       outcome_status: PoliceUKCrimeOutcomeStatusEntity(category: "category-test",
+                                                                                                        date: "date-test"))]
   private let apiEndpoint = URL(string: PoliceUKEndpoints.crimesWithNoLocation(crimeCategory: requestParamForce,
                                                                                force: requestParamCrimeCategory,
                                                                                date: requestParamDate))!
