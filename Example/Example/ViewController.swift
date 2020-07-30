@@ -134,7 +134,7 @@ class ViewController: UIViewController {
   
   
   func getCrimesByLocation() {
-    PoliceUKNetworking.getCrimesByLocation(forLocationID: "884227", forDate:"2017-10") { response, error in
+    PoliceUKNetworking.getCrimesByLocation(forLocationID: "884227", forDate:"2020-05") { response, error in
       print("------------------ getCrimeByLocation ------------------")
       if let response = response {
         print("response: \(response)")
