@@ -19,7 +19,7 @@ class ViewController: UIViewController {
       print(response?.date)
     }
     
-    PoliceUKNetworking.getCrimeCategory { response, error in
+    PoliceUKNetworking.getCrimeCategories { response, error in
       print("------------------ getCrimeCategory ------------------")
       print(response)
     }
@@ -99,13 +99,13 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeByLocation(forLocationID: "884227", forDate:"2017-10") { response, error in
+    PoliceUKNetworking.getCrimesByLocation(forLocationID: "884227", forDate:"2017-10") { response, error in
       print("------------------ getCrimeByLocation ------------------")
       print(response)
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeByLocation(forLatitude:"52.629729", forLongitude: "-1.131592") { response, error in
+    PoliceUKNetworking.getCrimesByLocation(forLatitude:"52.629729", forLongitude: "-1.131592") { response, error in
       print("------------------ getCrimeByLocation ------------------")
       print(response)
       print(error)
@@ -123,7 +123,7 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forLatitude: "52.629729",
+    PoliceUKNetworking.getCrimesByCustomLocation(forLatitude: "52.629729",
                                                 forLongitude: "-1.131592",
                                                 forCrimeCategory: "burglary",
                                                 forDate: "2020-01")
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"],
+    PoliceUKNetworking.getCrimesByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"],
                                                 forDate: "2020-01")
     { response, error in
       print("------------------ getCrimeByCustomLocation ------------------")
@@ -141,7 +141,7 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeOutcomeByLocation(forLocationID: "883498",
+    PoliceUKNetworking.getCrimeOutcomesByLocation(forLocationID: "883498",
                                                  forDate: "2020-05")
     { response, error in
       print("------------------ getCrimeOutcomeByLocation ------------------")
@@ -149,13 +149,13 @@ class ViewController: UIViewController {
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeOutcomeByCustomLocation(forLatitude: "52.629729", forLongitude: "-1.131592", forDate: "2020-03") { response, error in
+    PoliceUKNetworking.getCrimeOutcomesByCustomLocation(forLatitude: "52.629729", forLongitude: "-1.131592", forDate: "2020-03") { response, error in
       print("------------------ getCrimeOutcomeByCustomLocation ------------------")
       print(response)
       print(error)
     }
     
-    PoliceUKNetworking.getCrimeOutcomeByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"], forDate: "2020-03") { response, error in
+    PoliceUKNetworking.getCrimeOutcomesByCustomLocation(forPoly: ["52.268,0.543","52.794,0.238", "52.130,0.47"], forDate: "2020-03") { response, error in
       print("------------------ getCrimeOutcomeByCustomLocation ------------------")
       print(response)
       print(error)

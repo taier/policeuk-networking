@@ -38,7 +38,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 200, data: [Mock.HTTPMethod.get : mockedData])
     mock.register()
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forPoly: requestParamPoly,
+    PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,
                                                 forCrimeCategory: requestParamCrimeCategory,
                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNotNil(response, "response is null on success")
@@ -61,7 +61,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 200, data: [Mock.HTTPMethod.get : mockedData])
     mock.register()
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forLatitude: requestParamLat,
+    PoliceUKNetworking.getCrimesByCustomLocation(forLatitude: requestParamLat,
                                                 forLongitude: requestParamLong,
                                                 forCrimeCategory: requestParamCrimeCategory,
                                                 forDate: requestParamDate) { (response, error) in
@@ -84,7 +84,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 400, data: [Mock.HTTPMethod.get : Data()])
     mock.register()
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forPoly: requestParamPoly,
+    PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,
                                                 forCrimeCategory: requestParamCrimeCategory,
                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNil(response, "response is not null on error")
@@ -113,7 +113,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 400, data: [Mock.HTTPMethod.get : Data()])
     mock.register()
     
-    PoliceUKNetworking.getCrimeByCustomLocation(forLatitude: requestParamLat,
+    PoliceUKNetworking.getCrimesByCustomLocation(forLatitude: requestParamLat,
                                                 forLongitude: requestParamLong,
                                                 forCrimeCategory: requestParamCrimeCategory,
                                                 forDate: requestParamDate) { (response, error) in

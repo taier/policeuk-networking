@@ -65,7 +65,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeCategory(forDate: String? = nil,
+  public static func getCrimeCategories(forDate: String? = nil,
                                       completion:
     @escaping (([PoliceUKCrimeCategoryEntity]?, Error?)->Void)) {
     shared.policeUKCrimeCategoriesGateway
@@ -89,7 +89,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeOutcomeByLocation(forLocationID: String,
+  public static func getCrimeOutcomesByLocation(forLocationID: String,
                                                forDate: String? = nil,
                                                completion:
     @escaping (([PoliceUKCrimeOutcomeEntity]?, Error?)->Void)) {
@@ -104,7 +104,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeOutcomeByCustomLocation(forLatitude: String,
+  public static func getCrimeOutcomesByCustomLocation(forLatitude: String,
                                                      forLongitude: String,
                                                      forDate: String? = nil,
                                                      completion:
@@ -121,7 +121,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeOutcomeByCustomLocation(forPoly: [String],
+  public static func getCrimeOutcomesByCustomLocation(forPoly: [String],
                                                      forDate: String? = nil,
                                                      completion:
     @escaping (([PoliceUKCrimeOutcomeEntity]?, Error?)->Void)) {
@@ -136,7 +136,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeByLocation(forLocationID: String,
+  public static func getCrimesByLocation(forLocationID: String,
                                         forDate: String? = nil,
                                         completion:
     @escaping (([PoliceUKCrimeEntitiy]?, Error?)->Void)) {
@@ -151,7 +151,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeByLocation(forLatitude: String,
+  public static func getCrimesByLocation(forLatitude: String,
                                         forLongitude: String,
                                         forDate: String? = nil,
                                         completion:
@@ -168,7 +168,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeByCustomLocation(forLatitude: String,
+  public static func getCrimesByCustomLocation(forLatitude: String,
                                               forLongitude: String,
                                               forCrimeCategory: String = defaultCrimeCategory,
                                               forDate: String? = nil,
@@ -187,7 +187,7 @@ public class PoliceUKNetworking {
     }.disposed(by: shared.disposeBag)
   }
   
-  public static func getCrimeByCustomLocation(forPoly: [String],
+  public static func getCrimesByCustomLocation(forPoly: [String],
                                               forCrimeCategory: String = defaultCrimeCategory,
                                               forDate: String? = nil,
                                               completion:
