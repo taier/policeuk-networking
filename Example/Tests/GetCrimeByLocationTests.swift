@@ -1,10 +1,4 @@
-//
-//  GetCrimeByLocationTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import XCTest
@@ -26,7 +20,7 @@ class GetCrimeByLocationTests: XCTestCaseBase {
                                                        location_subtype: "location-subtype-test",
                                                        month: "month-test",
                                                        outcome_status: PoliceUKCrimeOutcomeStatusEntity(category: "category-test",
-                                                                                                  date: "date-test"))]
+                                                                                                        date: "date-test"))]
   func testSuccessByLocationID() {
     let requestExpectation = expectation(description: "Request should finish")
     
@@ -37,7 +31,7 @@ class GetCrimeByLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByLocation(forLocationID: requestParamLocationID,
-                                          forDate: requestParamDate) { (response, error) in
+                                           forDate: requestParamDate) { (response, error) in
                                             XCTAssertNotNil(response, "response is null on success")
                                             XCTAssertNil(error, "error is not null on success")
                                             XCTAssertEqual(response, self.expectedResponse, "response differ from the expected")
@@ -58,8 +52,8 @@ class GetCrimeByLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByLocation(forLatitude: requestParamLat,
-                                          forLongitude: requestParamLong,
-                                          forDate: requestParamDate) { (response, error) in
+                                           forLongitude: requestParamLong,
+                                           forDate: requestParamDate) { (response, error) in
                                             XCTAssertNotNil(response, "response is null on success")
                                             XCTAssertNil(error, "error is not null on success")
                                             XCTAssertEqual(response, self.expectedResponse, "response differ from the expected")
@@ -78,7 +72,7 @@ class GetCrimeByLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByLocation(forLocationID: requestParamLocationID,
-                                          forDate: requestParamDate) { (response, error) in
+                                           forDate: requestParamDate) { (response, error) in
                                             XCTAssertNil(response, "response is not null on error")
                                             XCTAssertNotNil(error, "error is null on error")
                                             
@@ -104,8 +98,8 @@ class GetCrimeByLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByLocation(forLatitude: requestParamLat,
-                                          forLongitude: requestParamLong,
-                                          forDate: requestParamDate) { (response, error) in
+                                           forLongitude: requestParamLong,
+                                           forDate: requestParamDate) { (response, error) in
                                             XCTAssertNil(response, "response is not null on error")
                                             XCTAssertNotNil(error, "error is null on error")
                                             

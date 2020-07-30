@@ -1,10 +1,4 @@
-//
-//  GetSpecificForceTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import XCTest
 import Mocker
@@ -20,9 +14,9 @@ class GetSpecificForceTests: XCTestCaseBase {
                                                              url: "url-test",
                                                              telephone: "101",
                                                              engagement_methods: [PoliceUKSpecificForceEngagementMethodEntity(url: "url-test",
-                                                                                                                        type: "type-test",
-                                                                                                                        description: "description-test",
-                                                                                                                        title: "title-test")])
+                                                                                                                              type: "type-test",
+                                                                                                                              description: "description-test",
+                                                                                                                              title: "title-test")])
   private let apiEndpoint = URL(string: PoliceUKEndpoints.specificForce(force: requestParam))!
   
   func testSuccess() {

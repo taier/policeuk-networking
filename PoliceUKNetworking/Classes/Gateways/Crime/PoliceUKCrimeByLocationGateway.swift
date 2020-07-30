@@ -1,15 +1,10 @@
-//
-//  PoliceUKCrimeByLocationGateway.swift
-//  PoliceUKNetworking
-//
-//  Created by Deniss Kaibagarovs on 27/07/2020.
-//
+// Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import RxSwift
 import RxCocoa
 import Alamofire
- 
+
 class PoliceUKCrimeByLocationGateway {
   func getSingle(_ networking: Session,
                  forLocationID: String,

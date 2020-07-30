@@ -1,9 +1,4 @@
-//
-//  PoliceUKCimeOutcome.swift
-//  PoliceUKNetworking
-//
-//  Created by Deniss Kaibagarovs on 26/07/2020.
-//
+// Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import RxSwift
@@ -16,11 +11,11 @@ class PoliceUKCimeOutcomeGateway {
       networking.request(PoliceUKEndpoints.crimeOutcome(crime: forCrime))
         .responseDecodable(of: PoliceUKCrimeOutcomeRootEntity.self)
         { response in
-        if let entity = response.value {
-          emitter(.success(entity))
-        } else if let error = response.error {
-          emitter(.error(error))
-        }
+          if let entity = response.value {
+            emitter(.success(entity))
+          } else if let error = response.error {
+            emitter(.error(error))
+          }
       }
       return Disposables.create {}
     }

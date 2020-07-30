@@ -1,10 +1,4 @@
-//
-//  GetCrimeByCustomLocationTests.swift
-//  PoliceUKNetworking-Tests
-//
-//  Created by Deniss Kaibagarovs on 28/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
-//
+//  Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
 import XCTest
@@ -27,7 +21,7 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
                                                        location_subtype: "location-subtype-test",
                                                        month: "month-test",
                                                        outcome_status: PoliceUKCrimeOutcomeStatusEntity(category: "category-test",
-                                                                                                  date: "date-test"))]
+                                                                                                        date: "date-test"))]
   func testSuccessByPoly() {
     let requestExpectation = expectation(description: "Request should finish")
     
@@ -39,8 +33,8 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,
-                                                forCrimeCategory: requestParamCrimeCategory,
-                                                forDate: requestParamDate) { (response, error) in
+                                                 forCrimeCategory: requestParamCrimeCategory,
+                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNotNil(response, "response is null on success")
                                                   XCTAssertNil(error, "error is not null on success")
                                                   XCTAssertEqual(response, self.expectedResponse, "response differ from the expected")
@@ -62,9 +56,9 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forLatitude: requestParamLat,
-                                                forLongitude: requestParamLong,
-                                                forCrimeCategory: requestParamCrimeCategory,
-                                                forDate: requestParamDate) { (response, error) in
+                                                 forLongitude: requestParamLong,
+                                                 forCrimeCategory: requestParamCrimeCategory,
+                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNotNil(response, "response is null on success")
                                                   XCTAssertNil(error, "error is not null on success")
                                                   XCTAssertEqual(response, self.expectedResponse, "response differ from the expected")
@@ -85,8 +79,8 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,
-                                                forCrimeCategory: requestParamCrimeCategory,
-                                                forDate: requestParamDate) { (response, error) in
+                                                 forCrimeCategory: requestParamCrimeCategory,
+                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNil(response, "response is not null on error")
                                                   XCTAssertNotNil(error, "error is null on error")
                                                   
@@ -114,9 +108,9 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forLatitude: requestParamLat,
-                                                forLongitude: requestParamLong,
-                                                forCrimeCategory: requestParamCrimeCategory,
-                                                forDate: requestParamDate) { (response, error) in
+                                                 forLongitude: requestParamLong,
+                                                 forCrimeCategory: requestParamCrimeCategory,
+                                                 forDate: requestParamDate) { (response, error) in
                                                   XCTAssertNil(response, "response is not null on error")
                                                   XCTAssertNotNil(error, "error is null on error")
                                                   
