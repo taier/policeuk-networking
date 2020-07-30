@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   A networking library wraps requests from https://www.police.uk/ into a complete swift objects
                        DESC
 
-  s.homepage         = 'https://github.com/taier' #TODO
+  s.homepage         = 'https://github.com/taier/policeuk-networking'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Deniss Kaibagarovs' => 'deniss.kaibagarovs@gmail.com' }
   s.source           = { :git => 'https://github.com/taier/policeuk-networking.git', :tag => s.version.to_s }
