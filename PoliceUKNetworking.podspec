@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoliceUKNetworking'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A networking library that gets crime data from https://www.police.uk/'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/TheTaier'
 
   s.ios.deployment_target = '10.0'
-  s.swift_versions = "4.0"
+  s.swift_versions = "5.0"
 
   s.source_files = 'PoliceUKNetworking/Classes/**/*'
   
@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.dependency 'Alamofire', '~> 5.2'
-   s.dependency 'RxSwift', '~> 5'
-   s.dependency 'RxCocoa', '~> 5'
+   s.dependency 'RxSwift', '~> 5.1.1'
+   s.dependency 'RxCocoa', '~> 5.1.1'
 end
