@@ -23,7 +23,7 @@ Licence of the data: [Open Government Licence](https://www.nationalarchives.gov.
 PoliceUKNetworking is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'PoliceUKNetworking', '~> 1.0.0'
+pod 'PoliceUKNetworking', '~> 1.0.2'
 ```
 
 ## Requirements
