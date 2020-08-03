@@ -1,6 +1,7 @@
 // Created by Deniss Kaibagarovs d.kaibagarov@gmail.com
 
 import Foundation
+import Alamofire
 
 public class PoliceUKEndpoints {
   private static let baseURL = "https://data.police.uk"
@@ -90,13 +91,15 @@ public class PoliceUKEndpoints {
     }
   }
   
-  public static func crimeByCustomLocation(poly: [String],
-                                           crimeCategory: String,
-                                           date: String?) -> String {
+  public static func crimeByCustomLocation(crimeCategory: String) -> String {
+    return "\(APIUrl)/crimes-street/\(crimeCategory)"
+  }
+  
+  public static func composePolyParams(poly: [String], date: String?) -> Parameters {
     if let date = date {
-      return "\(APIUrl)/crimes-street/\(crimeCategory)?poly=\(poly.joined(separator: ":"))&date=\(date)"
+      return ["poly":"\(poly.joined(separator: ":"))", "date": "\(date)"]
     } else {
-      return "\(APIUrl)/crimes-street/\(crimeCategory)?poly=\(poly.joined(separator: ":"))"
+      return ["poly":"\(poly.joined(separator: ":"))"]
     }
   }
   

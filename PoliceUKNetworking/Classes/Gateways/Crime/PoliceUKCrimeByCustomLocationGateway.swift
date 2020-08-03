@@ -33,9 +33,10 @@ class PoliceUKCrimeByCustomLocationGateway {
                  forCrimeCategory: String,
                  forDate: String?) -> Single<[PoliceUKCrimeEntitiy]> {
     return Single.create { emitter in
-      networking.request(PoliceUKEndpoints.crimeByCustomLocation(poly: forPoly,
-                                                                 crimeCategory: forCrimeCategory,
-                                                                 date: forDate))
+      let params = PoliceUKEndpoints.composePolyParams(poly: forPoly, date: forDate)
+      networking.request(PoliceUKEndpoints.crimeByCustomLocation(crimeCategory: forCrimeCategory),
+                         method: .post,
+                         parameters: params)
         .responseDecodable(of: [PoliceUKCrimeEntitiy].self)
         { response in
           if let entity = response.value {
