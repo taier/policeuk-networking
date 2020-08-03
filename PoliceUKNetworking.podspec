@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoliceUKNetworking'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A networking library that gets crime data from https://www.police.uk/'
 
 # This description is used to generate tags and improve search results.

@@ -25,11 +25,12 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
   func testSuccessByPoly() {
     let requestExpectation = expectation(description: "Request should finish")
     
-    let apiEndpoint = URL(string: PoliceUKEndpoints.crimeByCustomLocation(poly: requestParamPoly,
-                                                                          crimeCategory: requestParamCrimeCategory,
-                                                                          date: requestParamDate))!
+    let apiEndpoint = URL(string: PoliceUKEndpoints.crimeByCustomLocation(crimeCategory: requestParamCrimeCategory))!
     let mockedData = try! JSONEncoder().encode(expectedResponse)
-    let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 200, data: [Mock.HTTPMethod.get : mockedData])
+    let mock = Mock(url: apiEndpoint,
+                    dataType: .json,
+                    statusCode: 200,
+                    data: [Mock.HTTPMethod.post : mockedData])
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,
@@ -71,11 +72,9 @@ class GetCrimeByCustomLocationTests: XCTestCaseBase {
   func testErrorByPoly() {
     let requestExpectation = expectation(description: "Request should finish")
     
-    let apiEndpoint = URL(string: PoliceUKEndpoints.crimeByCustomLocation(poly: requestParamPoly,
-                                                                          crimeCategory: requestParamCrimeCategory,
-                                                                          date: requestParamDate))!
+    let apiEndpoint = URL(string: PoliceUKEndpoints.crimeByCustomLocation(crimeCategory: requestParamCrimeCategory))!
     
-    let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 400, data: [Mock.HTTPMethod.get : Data()])
+    let mock = Mock(url: apiEndpoint, dataType: .json, statusCode: 400, data: [Mock.HTTPMethod.post : Data()])
     mock.register()
     
     PoliceUKNetworking.getCrimesByCustomLocation(forPoly: requestParamPoly,

@@ -99,14 +99,10 @@ class PoliceUKEndpointsTests: XCTestCaseBase {
                                                            date: testDate),
                    "\(APIUrl)/crimes-street/\(testCrimeCategory)?lat=\(testLat)&lng=\(testLng)&date=\(testDate)")
     
-    XCTAssertEqual(PoliceUKEndpoints.crimeByCustomLocation(poly: testPoly,
-                                                           crimeCategory: testCrimeCategory,
-                                                           date: nil),
-                   "\(APIUrl)/crimes-street/\(testCrimeCategory)?poly=\(testPoly.joined(separator: ":"))")
-    XCTAssertEqual(PoliceUKEndpoints.crimeByCustomLocation(poly: testPoly,
-                                                           crimeCategory: testCrimeCategory,
-                                                           date: testDate),
-                   "\(APIUrl)/crimes-street/\(testCrimeCategory)?poly=\(testPoly.joined(separator: ":"))&date=\(testDate)")
+    XCTAssertEqual(PoliceUKEndpoints.crimeByCustomLocation(crimeCategory: testCrimeCategory),
+                   "\(APIUrl)/crimes-street/\(testCrimeCategory)")
+    XCTAssertEqual(PoliceUKEndpoints.crimeByCustomLocation(crimeCategory: testCrimeCategory),
+                   "\(APIUrl)/crimes-street/\(testCrimeCategory)")
   }
   
   func testCrimeDataAvailability() {
